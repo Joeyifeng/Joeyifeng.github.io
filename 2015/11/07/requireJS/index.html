@@ -22,8 +22,6 @@
 
 
 
-  <link href='//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-
 
 <link rel="stylesheet" type="text/css" href="/css/main.css?v=0.4.5.1"/>
 
@@ -39,19 +37,34 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="description" content="requireJS
+requireJS的作用
+实现js文件的异步加载，避免一次性加载过多的js文件，网页失去响应
+管理模块之间的依赖性，便于代码的依赖和维护
+
+使用前，需要加载require.js 和配置app.js，引入格式如下：
+&amp;lt;script src=&amp;quot;require.js&amp;quot; data-main=&amp;quot;app.js&amp;quot;&amp;gt;&amp;lt;/script&amp;g">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2015/10/16/hello-world/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2015-10-16T04:34:30.995Z">
+<meta property="og:title" content="初识requireJS">
+<meta property="og:url" content="http://yoursite.com/2015/11/07/requireJS/index.html">
+<meta property="og:site_name" content="邹毅锋的博客">
+<meta property="og:description" content="requireJS
+requireJS的作用
+实现js文件的异步加载，避免一次性加载过多的js文件，网页失去响应
+管理模块之间的依赖性，便于代码的依赖和维护
+
+使用前，需要加载require.js 和配置app.js，引入格式如下：
+&amp;lt;script src=&amp;quot;require.js&amp;quot; data-main=&amp;quot;app.js&amp;quot;&amp;gt;&amp;lt;/script&amp;g">
+<meta property="og:updated_time" content="2015-11-07T15:00:38.601Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="初识requireJS">
+<meta name="twitter:description" content="requireJS
+requireJS的作用
+实现js文件的异步加载，避免一次性加载过多的js文件，网页失去响应
+管理模块之间的依赖性，便于代码的依赖和维护
+
+使用前，需要加载require.js 和配置app.js，引入格式如下：
+&amp;lt;script src=&amp;quot;require.js&amp;quot; data-main=&amp;quot;app.js&amp;quot;&amp;gt;&amp;lt;/script&amp;g">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -63,10 +76,10 @@ Quick">
 
 
 
-  <title> Hello World | Hexo </title>
+  <title> 初识requireJS | 邹毅锋的博客 </title>
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="">
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
   <!--[if lte IE 8]>
   <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
@@ -94,7 +107,7 @@ Quick">
       <span class="logo">
         <i class="icon-next-logo"></i>
       </span>
-      <span class="site-title">Hexo</span>
+      <span class="site-title">邹毅锋的博客</span>
   </a>
   <span class="logo-line-after"><i></i></span>
 </h1>
@@ -117,7 +130,23 @@ Quick">
         <li class="menu-item menu-item-home">
           <a href="/" rel="section">
             <i class="menu-item-icon icon-next-home"></i> <br />
-            首頁
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            <i class="menu-item-icon icon-next-categories"></i> <br />
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            <i class="menu-item-icon icon-next-about"></i> <br />
+            关于
           </a>
         </li>
       
@@ -125,7 +154,7 @@ Quick">
         <li class="menu-item menu-item-archives">
           <a href="/archives" rel="section">
             <i class="menu-item-icon icon-next-archives"></i> <br />
-            歸檔
+            归档
           </a>
         </li>
       
@@ -133,7 +162,7 @@ Quick">
         <li class="menu-item menu-item-tags">
           <a href="/tags" rel="section">
             <i class="menu-item-icon icon-next-tags"></i> <br />
-            標籤
+            标签
           </a>
         </li>
       
@@ -165,7 +194,7 @@ Quick">
           
           
             
-              Hello World
+              初识requireJS
             
           
         </h1>
@@ -173,9 +202,9 @@ Quick">
 
       <div class="post-meta">
         <span class="post-time">
-          發表於
-          <time itemprop="dateCreated" datetime="2015-10-16T12:34:30+08:00" content="2015-10-16">
-            2015-10-16
+          发表于
+          <time itemprop="dateCreated" datetime="2015-11-07T20:09:42+08:00" content="2015-11-07">
+            2015-11-07
           </time>
         </span>
 
@@ -194,15 +223,114 @@ Quick">
       
 
       
-        <span itemprop="articleBody"><p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <span itemprop="articleBody"><h3 id="requireJS">requireJS</h3><hr>
+<h5 id="requireJS的作用">requireJS的作用</h5><ul>
+<li>实现js文件的异步加载，避免一次性加载过多的js文件，网页失去响应</li>
+<li>管理模块之间的依赖性，便于代码的依赖和维护</li>
+</ul>
+<p>使用前，需要加载require.js 和配置app.js，引入格式如下：</p>
+<p><code>&lt;script src=&quot;require.js&quot; data-main=&quot;app.js&quot;&gt;&lt;/script&gt;</code><br><a id="more"></a><br>app.js配置格式</p>
+<pre><code>require.config({     //require.config主要用于修改require的默认配置
+    baseUrl:'xxxx',  //这里是js文件放在总目录，paths中可以省略
+    paths:{
+        foo: 'foo',
+        foo1: 'foo1' //前者是在js中用到名字,后者是要引入的模块名(已省略.js后缀)
+    }
+});</code></pre>
+
+
+<pre><code>require(['module1','module2','module3'],function(module1,module2,module3){
+    module1.foo();
+    module2.foo()...
+});</code></pre>
+
+<p>在<code>requirejs</code>的<code>2.xx</code>版本中，对于不符合AMD规范的模块，即</p>
+<pre><code>function foo(){
+
+}
+function foo(){
+
+}....</code></pre>
+不需要使用`shim`或者`init`暴露模块,直接调用模块内的方法名如`foo()`,而不是`module.foo()`;
+
+使用了`shim`后，可直接调用模块内的方法名`foo()`或者`modulename()`
+
+`shim` `init`暴露模块
+<pre><code>require.config({
+    baseUrl:'',
+    paths:{
+    },
+    shim:{
+        modulename:{exports: 'functionName'},
+        backbone:{
+            deps:['underscore'],    //依赖underscore
+            exports:'backbone'      //模块名字backbone
+        }
+        ...
+        modulename:{
+            init: function(){
+                return {
+                    foo1: functionName,
+                    foo2: functionName
+                }
+            }
+        }
+    }
+
+})</code></pre>
+
+<p>1.没用requirejs实现之前,不依赖其他js库实现模块化</p>
+<pre><code>define(function(){
+    ...
+})</code></pre>
+
+<p>一般js实现方法</p>
+<pre><code>var module = (function(){
+    ...
+    _variable: xxx;     
+    foo: function(){}
+    return {
+        foo: foo
+    }
+}());</code></pre>
+
+<p>2.依赖其他js库(模块扩展)</p>
+<pre><code>define(['a'],function(a){
+    a.foo();
+    ...
+    return {
+        ...
+    }
+});</code></pre>
+
+<p>一般js实现方法</p>
+<pre><code>var module1 = (function(module){
+    ...
+    module.newfoo = function(){
+        //扩展module
+    }
+    return module1;
+}(module));</code></pre>
+
+<p>似乎使用requirejs并不会产生其他的全局变量,传统使用命名空间法避免产生过多的全局变量的方法如下</p>
+<pre><code>var GLOBAL={};       //将所有的变量都挂在GLOBAL的这一全局变量上
+GLOBAL.namespace = function(str){   //传入新建的变量str
+    var arr= str.split('.'),o=GLOBAL;
+    //str的形式如GLOBAL.a或a或a.b
+    for(i=(arr[0]==="GLOBAL")?1:0;i < arr.length;i++){
+    //如果首元素为GLOBAL,直接读取第二个，因为GLOBAL已存在，后续元素才是需要挂载到GLOBAL对象上
+        o[arr[i]]=o[arr[i]]||{};
+        //第一次o是GLOBAL对象,如果GLOBAL.arr[i]不存在，则新建对象，如果存在，则不改变
+        o=arr[arr[i]]
+        //此处是往第二第三...更后的对象递进，开辟空间
+    }
+};</code></pre>
+
+<h4 id="requireJS注意点">requireJS注意点</h4><ul>
+<li><p>回调函数中最后都会返回一个对象{}，其中以对象字面量的形式返回define中定义的函数和属性,让其他模块可以引用，而require函数不需要return语句</p>
+</li>
+<li></li>
+</ul>
 </span>
       
     </div>
@@ -210,6 +338,18 @@ Quick">
     <footer class="post-footer">
       
 
+      
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/11/07/sassUsage/" rel="next">SASS的简单命令</a>
+            
+          </div>
+        </div>
       
 
       
@@ -251,39 +391,39 @@ Quick">
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目錄
+            文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            本站概覽
+            站点概览
           </li>
         </ul>
       
 
       <section class="site-overview">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" src="/images/default_avatar.jpg" alt="John Doe" itemprop="image"/>
-          <p class="site-author-name" itemprop="name">John Doe</p>
+          <img class="site-author-image" src="/images/avator.jpg" alt="Joeyifeng" itemprop="image"/>
+          <p class="site-author-name" itemprop="name">Joeyifeng</p>
         </div>
         <p class="site-description motion-element" itemprop="description"></p>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">1</span>
-              <span class="site-state-item-name">文章</span>
+              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-name">日志</span>
             </a>
           </div>
 
           <div class="site-state-item site-state-categories">
-            
+            <a href="/categories">
               <span class="site-state-item-count">0</span>
-              <span class="site-state-item-name">分類</span>
-              
+              <span class="site-state-item-name">分类</span>
+              </a>
           </div>
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
               <span class="site-state-item-count">0</span>
-              <span class="site-state-item-name">標籤</span>
+              <span class="site-state-item-name">标签</span>
               </a>
           </div>
 
@@ -310,7 +450,7 @@ Quick">
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick_Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create_a_new_post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run_server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate_static_files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy_to_remote_sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#requireJS"><span class="nav-number">1.</span> <span class="nav-text">requireJS</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#requireJS的作用"><span class="nav-number">1.0.1.</span> <span class="nav-text">requireJS的作用</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#requireJS注意点"><span class="nav-number">1.1.</span> <span class="nav-text">requireJS注意点</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
@@ -331,15 +471,15 @@ Quick">
   <span class="with-love">
     <i class="icon-next-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">John Doe</span>
+  <span class="author" itemprop="copyrightHolder">Joeyifeng</span>
 </div>
 
 <div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 強力驅動
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
-  主題 -
+  主题 -
   <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
     NexT
   </a>
