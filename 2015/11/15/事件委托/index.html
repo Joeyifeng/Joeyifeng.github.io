@@ -37,15 +37,27 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="邹毅锋的点滴">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="####事件委托事件委托利用了事件冒泡,只指定一个事件处理程序,就可以管理某一类型的所有事件
+问题一：什么是事件冒泡？事件开始时有最具体的元素（文档中嵌套层次最深的那个结点）接收,然后逐级传播到较为不具体的结点（文档）
+DOM事件流事件捕获阶段(事件由document对象首先接收,再到事件的实际目标)事件发生阶段时间冒泡阶段(与事件捕获顺序相反)
+如以上代码所示,浏览器会依次提示5、4、3、2、1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="聊聊事件委托">
+<meta property="og:url" content="http://yoursite.com/2015/11/15/事件委托/index.html">
 <meta property="og:site_name" content="邹毅锋的点滴">
-<meta property="og:description">
+<meta property="og:description" content="####事件委托事件委托利用了事件冒泡,只指定一个事件处理程序,就可以管理某一类型的所有事件
+问题一：什么是事件冒泡？事件开始时有最具体的元素（文档中嵌套层次最深的那个结点）接收,然后逐级传播到较为不具体的结点（文档）
+DOM事件流事件捕获阶段(事件由document对象首先接收,再到事件的实际目标)事件发生阶段时间冒泡阶段(与事件捕获顺序相反)
+如以上代码所示,浏览器会依次提示5、4、3、2、1">
+<meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary3_1.png">
+<meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary3_2.png">
+<meta property="og:updated_time" content="2015-11-16T14:11:21.211Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="邹毅锋的点滴">
-<meta name="twitter:description">
+<meta name="twitter:title" content="聊聊事件委托">
+<meta name="twitter:description" content="####事件委托事件委托利用了事件冒泡,只指定一个事件处理程序,就可以管理某一类型的所有事件
+问题一：什么是事件冒泡？事件开始时有最具体的元素（文档中嵌套层次最深的那个结点）接收,然后逐级传播到较为不具体的结点（文档）
+DOM事件流事件捕获阶段(事件由document对象首先接收,再到事件的实际目标)事件发生阶段时间冒泡阶段(与事件捕获顺序相反)
+如以上代码所示,浏览器会依次提示5、4、3、2、1">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -57,7 +69,7 @@
 
 
 
-  <title> 邹毅锋的点滴 </title>
+  <title> 聊聊事件委托 | 邹毅锋的点滴 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -78,9 +90,7 @@
 
 
 
-  <div class="container one-column 
-   page-home 
-">
+  <div class="container one-column page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -164,9 +174,9 @@
     <main id="main" class="main">
       <div class="main-inner">
         <div id="content" class="content"> 
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
@@ -177,80 +187,7 @@
           
           
             
-              <a class="post-title-link" href="/2015/11/16/grunt/" itemprop="url">
-                Grunt手册
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2015-11-16T22:23:11+08:00" content="2015-11-16">
-            2015-11-16
-          </time>
-        </span>
-
-        
-
-        
-          
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/11/16/grunt/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/16/grunt/" itemprop="commentsCount"></span>
-              </a>
-            </span>
-          
-        
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <span itemprop="articleBody"><p>以下是我配置Gruntfile.js遇到的错误<br>场景一：想要Grunt检测sass变动,且自动编译，配置如左图<br><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_4.png" alt="a"> <img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_5.png" alt="b"><br>无报错信息，但CSS中无变更，正确配置右图<br>原因有待查找。。。</p>
-<p><a href="http://yujiangshui.com/grunt-basic-tutorial/" target="_blank" rel="external">初次配置请猛戳这里</a></p>
-</span>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/11/15/事件委托/" itemprop="url">
-                聊聊事件委托
-              </a>
+              聊聊事件委托
             
           
         </h1>
@@ -286,8 +223,7 @@
       
 
       
-        
-          <span itemprop="articleBody"><p>####事件委托<br><code>事件委托利用了事件冒泡,只指定一个事件处理程序,就可以管理某一类型的所有事件</code></p>
+        <span itemprop="articleBody"><p>####事件委托<br><code>事件委托利用了事件冒泡,只指定一个事件处理程序,就可以管理某一类型的所有事件</code></p>
 <p>问题一：什么是事件冒泡？<br><code>事件开始时有最具体的元素（文档中嵌套层次最深的那个结点）接收,然后逐级传播到较为不具体的结点（文档）</code></p>
 <p>DOM事件流<br>事件捕获阶段(事件由document对象首先接收,再到事件的实际目标)<br>事件发生阶段<br>时间冒泡阶段(与事件捕获顺序相反)</p>
 <p><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary3_1.png" alt="bubblecode"><br>如以上代码所示,浏览器会依次提示5、4、3、2、1、0,click事件依次由内到外在每个元素上发生</p>
@@ -311,7 +247,6 @@
 <p>适合采用事件委托技术的事件包括click、mousedown、mouseup、keydown、keyup、keypress。</p>
 <p>####除了事件委托<br>在不需要的时候移除事件处理程序，清除内存中留有那些过时不用的“空事件处理程序”。</p>
 </span>
-        
       
     </div>
 
@@ -319,262 +254,45 @@
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
+        <div class="post-nav">
+          <div class="post-nav-prev post-nav-item">
             
-              <a class="post-title-link" href="/2015/11/07/requireJS/" itemprop="url">
-                初识requireJS
-              </a>
+              <a href="/2015/11/16/grunt/" rel="prev">Grunt手册</a>
             
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2015-11-07T20:09:42+08:00" content="2015-11-07">
-            2015-11-07
-          </time>
-        </span>
-
-        
-
-        
-          
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/11/07/requireJS/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/07/requireJS/" itemprop="commentsCount"></span>
-              </a>
-            </span>
-          
-        
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h3 id="requireJS">requireJS</h3><h5 id="requireJS的作用">requireJS的作用</h5><ul>
-<li>实现js文件的异步加载，避免一次性加载过多的js文件，网页失去响应</li>
-<li>管理模块之间的依赖性，便于代码的依赖和维护</li>
-</ul>
-<p>使用前，需要加载require.js 和配置app.js，引入格式如下：</p>
-<p><code>&lt;script src=&quot;require.js&quot; data-main=&quot;app.js&quot;&gt;&lt;/script&gt;</code><br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/11/07/requireJS/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
           </div>
-        
-      
-    </div>
 
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
+          <div class="post-nav-next post-nav-item">
             
-              <a class="post-title-link" href="/2015/11/07/sassUsage/" itemprop="url">
-                SASS的简单命令
-              </a>
+              <a href="/2015/11/07/requireJS/" rel="next">初识requireJS</a>
             
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2015-11-07T20:07:01+08:00" content="2015-11-07">
-            2015-11-07
-          </time>
-        </span>
-
-        
-
-        
-          
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/11/07/sassUsage/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/07/sassUsage/" itemprop="commentsCount"></span>
-              </a>
-            </span>
-          
-        
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h3 id="SASS命令总结">SASS命令总结</h3><hr>
-<p>cmd内进入主目录，主目录下有<code>css</code>和<code>sass</code>两个文件夹<br>分别有<code>style.css</code>和<code>style.scss</code>文件</p>
-<blockquote>
-<p>sass&nbsp;&nbsp; sass/style.scss &nbsp;&nbsp;  css/style.css</p>
-</blockquote>
-<p>这命令将sass下的sytle.scss编译到style.css，不过<code>style.scss</code>文件中如果有嵌套，<code>style.css</code>文件中的代码缩进不太整洁，还保持嵌套风格的缩进，如下：<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/11/07/sassUsage/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
           </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
+        </div>
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-      
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/11/07/csstriangle/" itemprop="url">
-                CSS中的三角形
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2015-11-07T19:23:51+08:00" content="2015-11-07">
-            2015-11-07
-          </time>
-        </span>
-
-        
-
-        
-          
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/11/07/csstriangle/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/07/csstriangle/" itemprop="commentsCount"></span>
-              </a>
-            </span>
-          
-        
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <h3 id="CSS中的三角形">CSS中的三角形</h3><hr>
-<h5 id="上三角形">上三角形</h5><pre><code>#top{
-    width: 0;
-    height: 0;
-    border-bottom: 20px solid #fff;
-    border-left: 20px solid transparent;
-    border-right: 20px solid transparent;
-}</code></pre>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/11/07/csstriangle/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
+    <div class="post-spread">
       
     </div>
+  </div>
 
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-  </section>
-
-  
  </div>
 
         
 
+        
+          <div class="comments" id="comments">
+            
+              <div class="ds-thread" data-thread-key="2015/11/15/事件委托/"
+                   data-title="聊聊事件委托" data-url="http://yoursite.com/2015/11/15/事件委托/">
+              </div>
+            
+          </div>
         
       </div>
 
@@ -591,6 +309,15 @@
   <aside id="sidebar" class="sidebar">
     <div class="sidebar-inner">
 
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
       
 
       <section class="site-overview">
@@ -638,6 +365,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator"></div>
+          <div class="post-toc">
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator"></div>
+        </section>
       
 
     </div>
@@ -722,6 +460,165 @@
   <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
 
   
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.1" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 0.4 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    var $tocContent = $('.post-toc-content');
+    if (isDesktop() && CONFIG.sidebar === 'post') {
+      if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+        displaySidebar();
+      }
+    }
+  });
+</script>
+
+
 
   <script type="text/javascript">
     $(document).ready(function () {
