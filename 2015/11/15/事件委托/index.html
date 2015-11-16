@@ -39,25 +39,22 @@
 
 <meta name="description" content="事件委托事件委托利用了事件冒泡,只指定一个事件处理程序,就可以管理某一类型的所有事件
 问题一：什么是事件冒泡？事件开始时有最具体的元素（文档中嵌套层次最深的那个结点）接收,然后逐级传播到较为不具体的结点（文档）
-DOM事件流事件捕获阶段(事件由document对象首先接收,再到事件的实际目标)事件发生阶段时间冒泡阶段(与事件捕获顺序相反)
-如以上代码所示,浏览器会依次提示5、4、3、2、1、0,c">
+DOM事件流事件捕获阶段(事件由document对象首先接收,再到事件的实际目标)事件发生阶段事件冒泡阶段(与事件捕获顺序相反)">
 <meta property="og:type" content="article">
 <meta property="og:title" content="聊聊事件委托">
 <meta property="og:url" content="http://yoursite.com/2015/11/15/事件委托/index.html">
 <meta property="og:site_name" content="邹毅锋的点滴">
 <meta property="og:description" content="事件委托事件委托利用了事件冒泡,只指定一个事件处理程序,就可以管理某一类型的所有事件
 问题一：什么是事件冒泡？事件开始时有最具体的元素（文档中嵌套层次最深的那个结点）接收,然后逐级传播到较为不具体的结点（文档）
-DOM事件流事件捕获阶段(事件由document对象首先接收,再到事件的实际目标)事件发生阶段时间冒泡阶段(与事件捕获顺序相反)
-如以上代码所示,浏览器会依次提示5、4、3、2、1、0,c">
+DOM事件流事件捕获阶段(事件由document对象首先接收,再到事件的实际目标)事件发生阶段事件冒泡阶段(与事件捕获顺序相反)">
 <meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary3_1.png">
 <meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary3_2.png">
-<meta property="og:updated_time" content="2015-11-16T14:58:47.104Z">
+<meta property="og:updated_time" content="2015-11-16T15:00:22.218Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="聊聊事件委托">
 <meta name="twitter:description" content="事件委托事件委托利用了事件冒泡,只指定一个事件处理程序,就可以管理某一类型的所有事件
 问题一：什么是事件冒泡？事件开始时有最具体的元素（文档中嵌套层次最深的那个结点）接收,然后逐级传播到较为不具体的结点（文档）
-DOM事件流事件捕获阶段(事件由document对象首先接收,再到事件的实际目标)事件发生阶段时间冒泡阶段(与事件捕获顺序相反)
-如以上代码所示,浏览器会依次提示5、4、3、2、1、0,c">
+DOM事件流事件捕获阶段(事件由document对象首先接收,再到事件的实际目标)事件发生阶段事件冒泡阶段(与事件捕获顺序相反)">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -225,8 +222,7 @@ DOM事件流事件捕获阶段(事件由document对象首先接收,再到事件�
       
         <span itemprop="articleBody"><h4 id="事件委托">事件委托</h4><p><code>事件委托利用了事件冒泡,只指定一个事件处理程序,就可以管理某一类型的所有事件</code></p>
 <p>问题一：什么是事件冒泡？<br><code>事件开始时有最具体的元素（文档中嵌套层次最深的那个结点）接收,然后逐级传播到较为不具体的结点（文档）</code></p>
-<p>DOM事件流<br>事件捕获阶段(事件由document对象首先接收,再到事件的实际目标)<br>事件发生阶段<br>时间冒泡阶段(与事件捕获顺序相反)</p>
-<p><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary3_1.png" alt="bubblecode"><br>如以上代码所示,浏览器会依次提示5、4、3、2、1、0,click事件依次由内到外在每个元素上发生</p>
+<p>DOM事件流<br>事件捕获阶段(事件由document对象首先接收,再到事件的实际目标)<br>事件发生阶段<br>事件冒泡阶段(与事件捕获顺序相反)<br><a id="more"></a><br><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary3_1.png" alt="bubblecode"><br>如以上代码所示,浏览器会依次提示5、4、3、2、1、0,click事件依次由内到外在每个元素上发生</p>
 <p>取消事件冒泡方法:<br>利用事件对象的方法 e.stopPropagation();<br>IE下 window.event.cancelBubble=true;</p>
 <p>不冒泡事件：blur、focus、load、unload</p>
 <h4 id="如何使用事件委托">如何使用事件委托</h4><p>添加事件处理程序<br>HTML事件处理程序：<code>&lt;a href=&quot;javascript:void(0)&quot; onclick=&quot;handler()&quot;/&gt;&lt;/a&gt;</code></p>
