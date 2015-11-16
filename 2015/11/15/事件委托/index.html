@@ -37,27 +37,27 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="####事件委托事件委托利用了事件冒泡,只指定一个事件处理程序,就可以管理某一类型的所有事件
+<meta name="description" content="事件委托事件委托利用了事件冒泡,只指定一个事件处理程序,就可以管理某一类型的所有事件
 问题一：什么是事件冒泡？事件开始时有最具体的元素（文档中嵌套层次最深的那个结点）接收,然后逐级传播到较为不具体的结点（文档）
 DOM事件流事件捕获阶段(事件由document对象首先接收,再到事件的实际目标)事件发生阶段时间冒泡阶段(与事件捕获顺序相反)
-如以上代码所示,浏览器会依次提示5、4、3、2、1">
+如以上代码所示,浏览器会依次提示5、4、3、2、1、0,c">
 <meta property="og:type" content="article">
 <meta property="og:title" content="聊聊事件委托">
 <meta property="og:url" content="http://yoursite.com/2015/11/15/事件委托/index.html">
 <meta property="og:site_name" content="邹毅锋的点滴">
-<meta property="og:description" content="####事件委托事件委托利用了事件冒泡,只指定一个事件处理程序,就可以管理某一类型的所有事件
+<meta property="og:description" content="事件委托事件委托利用了事件冒泡,只指定一个事件处理程序,就可以管理某一类型的所有事件
 问题一：什么是事件冒泡？事件开始时有最具体的元素（文档中嵌套层次最深的那个结点）接收,然后逐级传播到较为不具体的结点（文档）
 DOM事件流事件捕获阶段(事件由document对象首先接收,再到事件的实际目标)事件发生阶段时间冒泡阶段(与事件捕获顺序相反)
-如以上代码所示,浏览器会依次提示5、4、3、2、1">
+如以上代码所示,浏览器会依次提示5、4、3、2、1、0,c">
 <meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary3_1.png">
 <meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary3_2.png">
-<meta property="og:updated_time" content="2015-11-16T14:11:21.211Z">
+<meta property="og:updated_time" content="2015-11-16T14:58:47.104Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="聊聊事件委托">
-<meta name="twitter:description" content="####事件委托事件委托利用了事件冒泡,只指定一个事件处理程序,就可以管理某一类型的所有事件
+<meta name="twitter:description" content="事件委托事件委托利用了事件冒泡,只指定一个事件处理程序,就可以管理某一类型的所有事件
 问题一：什么是事件冒泡？事件开始时有最具体的元素（文档中嵌套层次最深的那个结点）接收,然后逐级传播到较为不具体的结点（文档）
 DOM事件流事件捕获阶段(事件由document对象首先接收,再到事件的实际目标)事件发生阶段时间冒泡阶段(与事件捕获顺序相反)
-如以上代码所示,浏览器会依次提示5、4、3、2、1">
+如以上代码所示,浏览器会依次提示5、4、3、2、1、0,c">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -223,13 +223,13 @@ DOM事件流事件捕获阶段(事件由document对象首先接收,再到事件�
       
 
       
-        <span itemprop="articleBody"><p>####事件委托<br><code>事件委托利用了事件冒泡,只指定一个事件处理程序,就可以管理某一类型的所有事件</code></p>
+        <span itemprop="articleBody"><h4 id="事件委托">事件委托</h4><p><code>事件委托利用了事件冒泡,只指定一个事件处理程序,就可以管理某一类型的所有事件</code></p>
 <p>问题一：什么是事件冒泡？<br><code>事件开始时有最具体的元素（文档中嵌套层次最深的那个结点）接收,然后逐级传播到较为不具体的结点（文档）</code></p>
 <p>DOM事件流<br>事件捕获阶段(事件由document对象首先接收,再到事件的实际目标)<br>事件发生阶段<br>时间冒泡阶段(与事件捕获顺序相反)</p>
 <p><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary3_1.png" alt="bubblecode"><br>如以上代码所示,浏览器会依次提示5、4、3、2、1、0,click事件依次由内到外在每个元素上发生</p>
 <p>取消事件冒泡方法:<br>利用事件对象的方法 e.stopPropagation();<br>IE下 window.event.cancelBubble=true;</p>
 <p>不冒泡事件：blur、focus、load、unload</p>
-<p>####如何使用事件委托<br>添加事件处理程序<br>HTML事件处理程序：<code>&lt;a href=&quot;javascript:void(0)&quot; onclick=&quot;handler()&quot;/&gt;&lt;/a&gt;</code></p>
+<h4 id="如何使用事件委托">如何使用事件委托</h4><p>添加事件处理程序<br>HTML事件处理程序：<code>&lt;a href=&quot;javascript:void(0)&quot; onclick=&quot;handler()&quot;/&gt;&lt;/a&gt;</code></p>
 <p>DOM0级:<br>var obj = document.getElementById(“obj”);<br>obj.onclick=function(){};<br>obj.onclick = null;</p>
 <ul>
 <li>一个元素只能添加一个事件处理程序,后面定义的会覆盖前面的。</li>
@@ -245,7 +245,8 @@ DOM事件流事件捕获阶段(事件由document对象首先接收,再到事件�
 <p>Javascript中,添加到页面上的事件处理程序数量直接关系到页面的整体运行性能。对“事件处理程序过多”问题的解决方案就是<code>事件委托</code></p>
 <p>使用事件委托,只需在DOM树中尽量高的层次节点上添加一个事件处理程序,如<br><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary3_2.png" alt="example"><br>栗子中,虽然没有在每个li中添加事件,但通过在ul上添加事件监听,事件会沿着li&gt;ul&gt;body&gt;html元素顺序依次发生,直到最终目标元素发生事件</p>
 <p>适合采用事件委托技术的事件包括click、mousedown、mouseup、keydown、keyup、keypress。</p>
-<p>####除了事件委托<br>在不需要的时候移除事件处理程序，清除内存中留有那些过时不用的“空事件处理程序”。</p>
+<h4 id="除了事件委托">除了事件委托</h4><p>在不需要的时候移除事件处理程序，清除内存中留有那些过时不用的“空事件处理程序”。</p>
+<p>有待更新。。。</p>
 </span>
       
     </div>
@@ -371,7 +372,7 @@ DOM事件流事件捕获阶段(事件由document对象首先接收,再到事件�
           <div class="post-toc">
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#事件委托"><span class="nav-number">1.</span> <span class="nav-text">事件委托</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何使用事件委托"><span class="nav-number">2.</span> <span class="nav-text">如何使用事件委托</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#除了事件委托"><span class="nav-number">3.</span> <span class="nav-text">除了事件委托</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
