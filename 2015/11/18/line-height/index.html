@@ -52,7 +52,7 @@
 <meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight4.png">
 <meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight5.png">
 <meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight6.png">
-<meta property="og:updated_time" content="2015-11-21T02:55:06.108Z">
+<meta property="og:updated_time" content="2015-11-21T06:30:13.788Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="我所理解的line-height">
 <meta name="twitter:description" content="line-height相邻文本行基线之间的距离。所谓的基线，就是对于“xxx前端”中“xxx”的下端沿(并非“前端”的下端沿)。">
@@ -225,7 +225,7 @@
 <a id="more"></a>
 <p>两条基线的距离<br><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineh3.jpg" alt="examle"></p>
 <p>文本行中的每个元素都会生成一个<code>内容区</code>(content area),这由字体大小决定其大小(换言之，内容区紧贴字体)内容区会生成行内框(inline box)。<br>如何确定给定元素的行间距，只需将<code>line-height</code>减去<code>font-size</code>,就是总的行间距(有可能为<code>负值</code>)。将此值除以2，再将间距的一半应用(注意并非是添加)到内容区的顶部和底部,内容区大小不受影响，行内框受到line-height的影响，而我们在屏幕上看到的正是行内框,所以为什么<code>line-height</code>小于<code>font-size</code>时，文本会重叠(因为行内框小于内容区，浏览器显示的是行内框)</p>
-<p>一旦内容行生成所有的行内框，接下来在行框(line-box)的结构中考虑这些行内框,行框的高度恰好包含最高行内框的顶端和最低行内框的底端。</p>
+<p>一旦内成容行生所有的行内框，接下来在行框(line-box)的结构中考虑这些行内框,行框的高度恰好包含最高行内框的顶端和最低行内框的底端。</p>
 <p>内容区<code>content area</code>如图<br><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineh5.jpg" alt="example"></p>
 <ul>
 <li>案例一<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">p</span> <span class="attribute">style</span>=<span class="value">"font-size:12px;line-height:2;"</span>&gt;</span>line-height<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -247,8 +247,9 @@
 </li>
 </ul>
 <p><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight4.png" alt="example"><br>原因：为了解决案例三的问题，设置一个缩放因子，缩放因子是继承值而不是计算值，为每个子元素根据自己的font-size计算line-height<br>类似的100%</p>
-<p>当div有了文字就会产生高度，高度是来自font-size还是line-height呢？<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">"font-size: 15px; line-height: 0; border: 1px solid #ccc;"</span>&gt;</span>lineheight<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">"font-size: 1px;line-height: 15px;border: 1px solid #ccc;"</span>&gt;</span>lineheight<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h6 id="当div有了文字就会产生高度，高度是来自font-size还是line-height呢？">当div有了文字就会产生高度，高度是来自font-size还是line-height呢？</h6><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">"font-size: 15px; line-height: 0; border: 1px solid #ccc;"</span>&gt;</span>lineheight<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">"font-size: 1px;line-height: 15px;border: 1px solid #ccc;"</span>&gt;</span>lineheight<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight5.png" alt="example"><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight6.png" alt="example"><br>答案显而易见</p>
+<h6 id="line-height:120%_和_line-height:1-2的区别？">line-height:120% 和 line-height:1.2的区别？</h6><p>1.都代表line-height为当前元素font-size的1.2倍<br>2.1带单位的行高都有继承性，子元素继承的是计算值。当父元素字体font-size为12px,line-height为300%,子元素font-size为15px,line-height为36px非45px<br>2.2父元素的不带单位的行高，子元素直接继承属性值。当父元素字体font-size为12px,line-height为300%,子元素font-size为15px,line-height为45px非36px(这里子元素的font-size要大过父元素,否则显示的line-height是父元素的line-height非子元素的line-height,这关于上述行框的最终高度的选取)</p>
 <p>资料参考出处:<a href="http://muki.tw/tech/css-line-height/" target="_blank" rel="external">http://muki.tw/tech/css-line-height/</a></p>
 </span>
       
@@ -373,7 +374,7 @@
           <div class="post-toc">
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#当div有了文字就会产生高度，高度是来自font-size还是line-height呢？"><span class="nav-number">1.</span> <span class="nav-text">当div有了文字就会产生高度，高度是来自font-size还是line-height呢？</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#line-height:120%_和_line-height:1-2的区别？"><span class="nav-number">2.</span> <span class="nav-text">line-height:120% 和 line-height:1.2的区别？</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
