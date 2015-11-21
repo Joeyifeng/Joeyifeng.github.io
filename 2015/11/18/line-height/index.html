@@ -37,14 +37,12 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="line-height，相邻文本行基线之间的距离。所谓的基线，就是对于“xxx前端”中“xxx”的下端沿(并非“前端”的下端沿)。两条基线的距离
-文本行中的每个元素都会生成一个内容区(content area),这由字体大小决定其大小(换言之，内容区紧贴字体)内容区会生成行内框(inline box)。如何确定给定元素的行间距，只需将line-height减去font-size,就是总的行间距(有">
+<meta name="description" content="line-height相邻文本行基线之间的距离。所谓的基线，就是对于“xxx前端”中“xxx”的下端沿(并非“前端”的下端沿)。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="我所理解的line-height">
 <meta property="og:url" content="http://yoursite.com/2015/11/18/line-height/index.html">
 <meta property="og:site_name" content="邹毅锋的笔记">
-<meta property="og:description" content="line-height，相邻文本行基线之间的距离。所谓的基线，就是对于“xxx前端”中“xxx”的下端沿(并非“前端”的下端沿)。两条基线的距离
-文本行中的每个元素都会生成一个内容区(content area),这由字体大小决定其大小(换言之，内容区紧贴字体)内容区会生成行内框(inline box)。如何确定给定元素的行间距，只需将line-height减去font-size,就是总的行间距(有">
+<meta property="og:description" content="line-height相邻文本行基线之间的距离。所谓的基线，就是对于“xxx前端”中“xxx”的下端沿(并非“前端”的下端沿)。">
 <meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineh2.jpg">
 <meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineh3.jpg">
 <meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineh5.jpg">
@@ -54,11 +52,10 @@
 <meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight4.png">
 <meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight5.png">
 <meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight6.png">
-<meta property="og:updated_time" content="2015-11-21T02:44:41.830Z">
+<meta property="og:updated_time" content="2015-11-21T02:55:06.108Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="我所理解的line-height">
-<meta name="twitter:description" content="line-height，相邻文本行基线之间的距离。所谓的基线，就是对于“xxx前端”中“xxx”的下端沿(并非“前端”的下端沿)。两条基线的距离
-文本行中的每个元素都会生成一个内容区(content area),这由字体大小决定其大小(换言之，内容区紧贴字体)内容区会生成行内框(inline box)。如何确定给定元素的行间距，只需将line-height减去font-size,就是总的行间距(有">
+<meta name="twitter:description" content="line-height相邻文本行基线之间的距离。所谓的基线，就是对于“xxx前端”中“xxx”的下端沿(并非“前端”的下端沿)。">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -224,10 +221,12 @@
       
 
       
-        <span itemprop="articleBody"><p>line-height，相邻文本行基线之间的距离。所谓的基线，就是对于“xxx前端”中“xxx”的下端沿(并非“前端”的下端沿)。<br><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineh2.jpg" alt="example"><br>两条基线的距离<br><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineh3.jpg" alt="examle"></p>
-<p>文本行中的每个元素都会生成一个内容区(content area),这由字体大小决定其大小(换言之，内容区紧贴字体)内容区会生成行内框(inline box)。<br>如何确定给定元素的行间距，只需将line-height减去font-size,就是总的行间距(有可能为负值)。将此值除以2，再将间距的一半应用(注意并非是添加)到内容区的顶部和底部,内容区大小不受影响，行内框受到line-height的影响，而我们在屏幕上看到的正是行内框,所以为什么line-height小于font-size时，文本会重叠(因为行内框小于内容区，浏览器显示的是行内框)</p>
+        <span itemprop="articleBody"><p><code>line-height</code>相邻文本行<code>基线</code>之间的距离。所谓的基线，就是对于“xxx前端”中“xxx”的下端沿(并非“前端”的下端沿)。<br><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineh2.jpg" alt="example"></p>
+<a id="more"></a>
+<p>两条基线的距离<br><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineh3.jpg" alt="examle"></p>
+<p>文本行中的每个元素都会生成一个<code>内容区</code>(content area),这由字体大小决定其大小(换言之，内容区紧贴字体)内容区会生成行内框(inline box)。<br>如何确定给定元素的行间距，只需将<code>line-height</code>减去<code>font-size</code>,就是总的行间距(有可能为<code>负值</code>)。将此值除以2，再将间距的一半应用(注意并非是添加)到内容区的顶部和底部,内容区大小不受影响，行内框受到line-height的影响，而我们在屏幕上看到的正是行内框,所以为什么<code>line-height</code>小于<code>font-size</code>时，文本会重叠(因为行内框小于内容区，浏览器显示的是行内框)</p>
 <p>一旦内容行生成所有的行内框，接下来在行框(line-box)的结构中考虑这些行内框,行框的高度恰好包含最高行内框的顶端和最低行内框的底端。</p>
-<p>内容区content area<br><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineh5.jpg" alt="example"></p>
+<p>内容区<code>content area</code>如图<br><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineh5.jpg" alt="example"></p>
 <ul>
 <li>案例一<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">p</span> <span class="attribute">style</span>=<span class="value">"font-size:12px;line-height:2;"</span>&gt;</span>line-height<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
@@ -249,7 +248,7 @@
 </ul>
 <p><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight4.png" alt="example"><br>原因：为了解决案例三的问题，设置一个缩放因子，缩放因子是继承值而不是计算值，为每个子元素根据自己的font-size计算line-height<br>类似的100%</p>
 <p>当div有了文字就会产生高度，高度是来自font-size还是line-height呢？<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">"font-size: 15px; line-height: 0; border: 1px solid #ccc;"</span>&gt;</span>lineheight<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">"font-size: 1px;line-height: 15px;border: 1px solid #ccc;"</span>&gt;</span>lineheight<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight5.png" alt="example">  <img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight6.png" alt="example"><br>答案显而易见</p>
+<p><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight5.png" alt="example"><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight6.png" alt="example"><br>答案显而易见</p>
 <p>资料参考出处:<a href="http://muki.tw/tech/css-line-height/" target="_blank" rel="external">http://muki.tw/tech/css-line-height/</a></p>
 </span>
       
@@ -261,8 +260,6 @@
       
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2015/11/18/my-new-post/" rel="prev">我所理解的line-height</a>
             
           </div>
 
@@ -334,7 +331,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
