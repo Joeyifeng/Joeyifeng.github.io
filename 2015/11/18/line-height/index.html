@@ -37,24 +37,28 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="事件委托事件委托利用了事件冒泡,只指定一个事件处理程序,就可以管理某一类型的所有事件
-问题一：什么是事件冒泡？事件开始时有最具体的元素（文档中嵌套层次最深的那个结点）接收,然后逐级传播到较为不具体的结点（文档）
-DOM事件流事件捕获阶段(事件由document对象首先接收,再到事件的实际目标)事件发生阶段事件冒泡阶段(与事件捕获顺序相反)">
+<meta name="description" content="line-height，相邻文本行基线之间的距离。所谓的基线，就是对于“xxx前端”中“xxx”的下端沿(并非“前端”的下端沿)。两条基线的距离
+文本行中的每个元素都会生成一个内容区(content area),这由字体大小决定其大小(换言之，内容区紧贴字体)内容区会生成行内框(inline box)。如何确定给定元素的行间距，只需将line-height减去font-size,就是总的行间距(有">
 <meta property="og:type" content="article">
-<meta property="og:title" content="聊聊事件委托">
-<meta property="og:url" content="http://yoursite.com/2015/11/15/事件委托/index.html">
+<meta property="og:title" content="我所理解的line-height">
+<meta property="og:url" content="http://yoursite.com/2015/11/18/line-height/index.html">
 <meta property="og:site_name" content="邹毅锋的笔记">
-<meta property="og:description" content="事件委托事件委托利用了事件冒泡,只指定一个事件处理程序,就可以管理某一类型的所有事件
-问题一：什么是事件冒泡？事件开始时有最具体的元素（文档中嵌套层次最深的那个结点）接收,然后逐级传播到较为不具体的结点（文档）
-DOM事件流事件捕获阶段(事件由document对象首先接收,再到事件的实际目标)事件发生阶段事件冒泡阶段(与事件捕获顺序相反)">
-<meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary3_1.png">
-<meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary3_2.png">
-<meta property="og:updated_time" content="2015-11-16T15:00:22.218Z">
+<meta property="og:description" content="line-height，相邻文本行基线之间的距离。所谓的基线，就是对于“xxx前端”中“xxx”的下端沿(并非“前端”的下端沿)。两条基线的距离
+文本行中的每个元素都会生成一个内容区(content area),这由字体大小决定其大小(换言之，内容区紧贴字体)内容区会生成行内框(inline box)。如何确定给定元素的行间距，只需将line-height减去font-size,就是总的行间距(有">
+<meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineh2.jpg">
+<meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineh3.jpg">
+<meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineh5.jpg">
+<meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight1.png">
+<meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight2.png">
+<meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight3.png">
+<meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight4.png">
+<meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight5.png">
+<meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight6.png">
+<meta property="og:updated_time" content="2015-11-21T02:44:41.830Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="聊聊事件委托">
-<meta name="twitter:description" content="事件委托事件委托利用了事件冒泡,只指定一个事件处理程序,就可以管理某一类型的所有事件
-问题一：什么是事件冒泡？事件开始时有最具体的元素（文档中嵌套层次最深的那个结点）接收,然后逐级传播到较为不具体的结点（文档）
-DOM事件流事件捕获阶段(事件由document对象首先接收,再到事件的实际目标)事件发生阶段事件冒泡阶段(与事件捕获顺序相反)">
+<meta name="twitter:title" content="我所理解的line-height">
+<meta name="twitter:description" content="line-height，相邻文本行基线之间的距离。所谓的基线，就是对于“xxx前端”中“xxx”的下端沿(并非“前端”的下端沿)。两条基线的距离
+文本行中的每个元素都会生成一个内容区(content area),这由字体大小决定其大小(换言之，内容区紧贴字体)内容区会生成行内框(inline box)。如何确定给定元素的行间距，只需将line-height减去font-size,就是总的行间距(有">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -66,7 +70,7 @@ DOM事件流事件捕获阶段(事件由document对象首先接收,再到事件�
 
 
 
-  <title> 聊聊事件委托 | 邹毅锋的笔记 </title>
+  <title> 我所理解的line-height | 邹毅锋的笔记 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -184,7 +188,7 @@ DOM事件流事件捕获阶段(事件由document对象首先接收,再到事件�
           
           
             
-              聊聊事件委托
+              我所理解的line-height
             
           
         </h1>
@@ -193,8 +197,8 @@ DOM事件流事件捕获阶段(事件由document对象首先接收,再到事件�
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-11-15T19:49:45+08:00" content="2015-11-15">
-            2015-11-15
+          <time itemprop="dateCreated" datetime="2015-11-18T18:43:25+08:00" content="2015-11-18">
+            2015-11-18
           </time>
         </span>
 
@@ -204,8 +208,8 @@ DOM事件流事件捕获阶段(事件由document对象首先接收,再到事件�
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/11/15/事件委托/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/15/事件委托/" itemprop="commentsCount"></span>
+              <a href="/2015/11/18/line-height/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/18/line-height/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -220,29 +224,33 @@ DOM事件流事件捕获阶段(事件由document对象首先接收,再到事件�
       
 
       
-        <span itemprop="articleBody"><h4 id="事件委托">事件委托</h4><p><code>事件委托利用了事件冒泡,只指定一个事件处理程序,就可以管理某一类型的所有事件</code></p>
-<p>问题一：什么是事件冒泡？<br><code>事件开始时有最具体的元素（文档中嵌套层次最深的那个结点）接收,然后逐级传播到较为不具体的结点（文档）</code></p>
-<p>DOM事件流<br>事件捕获阶段(事件由document对象首先接收,再到事件的实际目标)<br>事件发生阶段<br>事件冒泡阶段(与事件捕获顺序相反)<br><a id="more"></a><br><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary3_1.png" alt="bubblecode"><br>如以上代码所示,浏览器会依次提示5、4、3、2、1、0,click事件依次由内到外在每个元素上发生</p>
-<p>取消事件冒泡方法:<br>利用事件对象的方法 e.stopPropagation();<br>IE下 window.event.cancelBubble=true;</p>
-<p>不冒泡事件：blur、focus、load、unload</p>
-<h4 id="如何使用事件委托">如何使用事件委托</h4><p>添加事件处理程序<br>HTML事件处理程序：<code>&lt;a href=&quot;javascript:void(0)&quot; onclick=&quot;handler()&quot;/&gt;&lt;/a&gt;</code></p>
-<p>DOM0级:<br>var obj = document.getElementById(“obj”);<br>obj.onclick=function(){};<br>obj.onclick = null;</p>
+        <span itemprop="articleBody"><p>line-height，相邻文本行基线之间的距离。所谓的基线，就是对于“xxx前端”中“xxx”的下端沿(并非“前端”的下端沿)。<br><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineh2.jpg" alt="example"><br>两条基线的距离<br><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineh3.jpg" alt="examle"></p>
+<p>文本行中的每个元素都会生成一个内容区(content area),这由字体大小决定其大小(换言之，内容区紧贴字体)内容区会生成行内框(inline box)。<br>如何确定给定元素的行间距，只需将line-height减去font-size,就是总的行间距(有可能为负值)。将此值除以2，再将间距的一半应用(注意并非是添加)到内容区的顶部和底部,内容区大小不受影响，行内框受到line-height的影响，而我们在屏幕上看到的正是行内框,所以为什么line-height小于font-size时，文本会重叠(因为行内框小于内容区，浏览器显示的是行内框)</p>
+<p>一旦内容行生成所有的行内框，接下来在行框(line-box)的结构中考虑这些行内框,行框的高度恰好包含最高行内框的顶端和最低行内框的底端。</p>
+<p>内容区content area<br><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineh5.jpg" alt="example"></p>
 <ul>
-<li>一个元素只能添加一个事件处理程序,后面定义的会覆盖前面的。</li>
-<li>事件处理程序是在当前元素的作用域中运行。</li>
+<li>案例一<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">p</span> <span class="attribute">style</span>=<span class="value">"font-size:12px;line-height:2;"</span>&gt;</span>line-height<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<p>DOM2级:<br>var obj = document.getElementById(“obj”);<br>obj.addEventListener(‘click’,function(){},false);   </p>
+<p><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight1.png" alt="example"><br>原因: line-height=(1.2x2)px<br>类似的200%: line-height=(1.2x200%)px</p>
 <ul>
-<li>第三参数false表示在捕获阶段调用事件处理程序。true表示在冒泡阶段捕获</li>
-<li>一个元素可以添加多个事件处理程序,这多个事件处理程序会”顺序触发”。</li>
-<li>事件处理程序是在当前元素的作用域中运行。移除事件处理程序时,传入参数要与添加时使用的参数相等。 </li>
+<li>案例二<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">p</span> <span class="attribute">style</span>=<span class="value">"font-size:12px;line-height:20px;"</span>&gt;</span>line-height<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<p>IE下,方法分别为attachEvent()和detachEvent(),如<br>obj.attachEvent(‘onclick’,function(){})<br>-注意第一个参数”on”+xxx,事件处理程序是在全局作用域下运行,this等于window<br>-一个元素上的多个事件处理程序会”以相反的顺序被触发”。</p>
-<p>Javascript中,添加到页面上的事件处理程序数量直接关系到页面的整体运行性能。对“事件处理程序过多”问题的解决方案就是<code>事件委托</code></p>
-<p>使用事件委托,只需在DOM树中尽量高的层次节点上添加一个事件处理程序,如<br><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary3_2.png" alt="example"><br>栗子中,虽然没有在每个li中添加事件,但通过在ul上添加事件监听,事件会沿着li&gt;ul&gt;body&gt;html元素顺序依次发生,直到最终目标元素发生事件</p>
-<p>适合采用事件委托技术的事件包括click、mousedown、mouseup、keydown、keyup、keypress。</p>
-<h4 id="除了事件委托">除了事件委托</h4><p>在不需要的时候移除事件处理程序，清除内存中留有那些过时不用的“空事件处理程序”。</p>
-<p>有待更新。。。</p>
+<p><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight2.png" alt="example"><br>原因：line-height=20px</p>
+<ul>
+<li>案例三<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">"line-height:10px"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">p</span> <span class="attribute">style</span>=<span class="value">"font-size:18px"</span>&gt;</span>line-heightline-heightline-heightline-height</span><br><span class="line">    line-heightline-heightline-heightline-heightline-heightline-heightline-</span><br><span class="line">    heightline-heightline-heightline-heightline-height\<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight3.png" alt="example"><br>原因：段落P继承父级元素div的line-height,10px &lt; 18px,造成文字重叠</p>
+<ul>
+<li>案例四<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">"line-height:1"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">p</span> <span class="attribute">style</span>=<span class="value">"font-size:18px"</span>&gt;</span>line-heightline-heightline-heightline-heightline-</span><br><span class="line">    heightline-heightline-heightline-heightline-heightline-heightline-</span><br><span class="line">    heightline-heightline-heightline-heightline-height<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight4.png" alt="example"><br>原因：为了解决案例三的问题，设置一个缩放因子，缩放因子是继承值而不是计算值，为每个子元素根据自己的font-size计算line-height<br>类似的100%</p>
+<p>当div有了文字就会产生高度，高度是来自font-size还是line-height呢？<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">"font-size: 15px; line-height: 0; border: 1px solid #ccc;"</span>&gt;</span>lineheight<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">"font-size: 1px;line-height: 15px;border: 1px solid #ccc;"</span>&gt;</span>lineheight<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight5.png" alt="example">  <img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight6.png" alt="example"><br>答案显而易见</p>
+<p>资料参考出处:<a href="http://muki.tw/tech/css-line-height/" target="_blank" rel="external">http://muki.tw/tech/css-line-height/</a></p>
 </span>
       
     </div>
@@ -254,13 +262,11 @@ DOM事件流事件捕获阶段(事件由document对象首先接收,再到事件�
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/11/16/grunt/" rel="prev">Grunt手册</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/11/07/requireJS/" rel="next">初识requireJS</a>
+              <a href="/2015/11/16/grunt/" rel="next">Grunt手册</a>
             
           </div>
         </div>
@@ -285,8 +291,8 @@ DOM事件流事件捕获阶段(事件由document对象首先接收,再到事件�
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2015/11/15/事件委托/"
-                   data-title="聊聊事件委托" data-url="http://yoursite.com/2015/11/15/事件委托/">
+              <div class="ds-thread" data-thread-key="2015/11/18/line-height/"
+                   data-title="我所理解的line-height" data-url="http://yoursite.com/2015/11/18/line-height/">
               </div>
             
           </div>
@@ -368,7 +374,7 @@ DOM事件流事件捕获阶段(事件由document对象首先接收,再到事件�
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#事件委托"><span class="nav-number">1.</span> <span class="nav-text">事件委托</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#如何使用事件委托"><span class="nav-number">2.</span> <span class="nav-text">如何使用事件委托</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#除了事件委托"><span class="nav-number">3.</span> <span class="nav-text">除了事件委托</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
