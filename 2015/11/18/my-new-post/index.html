@@ -37,35 +37,25 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="SASS命令总结
-cmd内进入主目录，主目录下有css和sass两个文件夹分别有style.css和style.scss文件
-
-sass&amp;nbsp;&amp;nbsp; sass/style.scss &amp;nbsp;&amp;nbsp;  css/style.css
-
-这命令将sass下的sytle.scss编译到style.css，不过style.scss文件中如果有嵌套，style.css文件中的代码缩进不太整">
+<meta name="description" content="line-height，相邻文本行基线之间的距离。所谓的基线，就是对于“xxx前端”中“xxx”的下端沿(并非“前端”的下端沿)。两条基线的距离">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SASS的简单命令">
-<meta property="og:url" content="http://yoursite.com/2015/11/07/sassUsage/index.html">
+<meta property="og:title" content="我所理解的line-height">
+<meta property="og:url" content="http://yoursite.com/2015/11/18/my-new-post/index.html">
 <meta property="og:site_name" content="邹毅锋的笔记">
-<meta property="og:description" content="SASS命令总结
-cmd内进入主目录，主目录下有css和sass两个文件夹分别有style.css和style.scss文件
-
-sass&amp;nbsp;&amp;nbsp; sass/style.scss &amp;nbsp;&amp;nbsp;  css/style.css
-
-这命令将sass下的sytle.scss编译到style.css，不过style.scss文件中如果有嵌套，style.css文件中的代码缩进不太整">
-<meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary2_4.png">
-<meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary2_1.png">
-<meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary2_2.png">
-<meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary2_3.png">
-<meta property="og:updated_time" content="2015-11-11T15:46:31.621Z">
+<meta property="og:description" content="line-height，相邻文本行基线之间的距离。所谓的基线，就是对于“xxx前端”中“xxx”的下端沿(并非“前端”的下端沿)。两条基线的距离">
+<meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineh2.jpg">
+<meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineh3.jpg">
+<meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineh5.jpg">
+<meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight1.png">
+<meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight2.png">
+<meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight3.png">
+<meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight4.png">
+<meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight5.png">
+<meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight6.png">
+<meta property="og:updated_time" content="2015-11-21T02:48:08.237Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SASS的简单命令">
-<meta name="twitter:description" content="SASS命令总结
-cmd内进入主目录，主目录下有css和sass两个文件夹分别有style.css和style.scss文件
-
-sass&amp;nbsp;&amp;nbsp; sass/style.scss &amp;nbsp;&amp;nbsp;  css/style.css
-
-这命令将sass下的sytle.scss编译到style.css，不过style.scss文件中如果有嵌套，style.css文件中的代码缩进不太整">
+<meta name="twitter:title" content="我所理解的line-height">
+<meta name="twitter:description" content="line-height，相邻文本行基线之间的距离。所谓的基线，就是对于“xxx前端”中“xxx”的下端沿(并非“前端”的下端沿)。两条基线的距离">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -77,7 +67,7 @@ sass&amp;nbsp;&amp;nbsp; sass/style.scss &amp;nbsp;&amp;nbsp;  css/style.css
 
 
 
-  <title> SASS的简单命令 | 邹毅锋的笔记 </title>
+  <title> 我所理解的line-height | 邹毅锋的笔记 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -195,7 +185,7 @@ sass&amp;nbsp;&amp;nbsp; sass/style.scss &amp;nbsp;&amp;nbsp;  css/style.css
           
           
             
-              SASS的简单命令
+              我所理解的line-height
             
           
         </h1>
@@ -204,8 +194,8 @@ sass&amp;nbsp;&amp;nbsp; sass/style.scss &amp;nbsp;&amp;nbsp;  css/style.css
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-11-07T20:07:01+08:00" content="2015-11-07">
-            2015-11-07
+          <time itemprop="dateCreated" datetime="2015-11-18T18:43:25+08:00" content="2015-11-18">
+            2015-11-18
           </time>
         </span>
 
@@ -215,8 +205,8 @@ sass&amp;nbsp;&amp;nbsp; sass/style.scss &amp;nbsp;&amp;nbsp;  css/style.css
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/11/07/sassUsage/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/07/sassUsage/" itemprop="commentsCount"></span>
+              <a href="/2015/11/18/my-new-post/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/18/my-new-post/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -231,25 +221,32 @@ sass&amp;nbsp;&amp;nbsp; sass/style.scss &amp;nbsp;&amp;nbsp;  css/style.css
       
 
       
-        <span itemprop="articleBody"><h3 id="SASS命令总结">SASS命令总结</h3><hr>
-<p>cmd内进入主目录，主目录下有<code>css</code>和<code>sass</code>两个文件夹<br>分别有<code>style.css</code>和<code>style.scss</code>文件</p>
-<blockquote>
-<p>sass&nbsp;&nbsp; sass/style.scss &nbsp;&nbsp;  css/style.css</p>
-</blockquote>
-<p>这命令将sass下的sytle.scss编译到style.css，不过<code>style.scss</code>文件中如果有嵌套，<code>style.css</code>文件中的代码缩进不太整洁，还保持嵌套风格的缩进，如下：<br><a id="more"></a><br><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary2_4.png" alt="code"></p>
-<p><strong>原因是sass命令提供四个编译风格</strong></p>
-<p> nested      嵌套缩进的css代码<br> expanded    没有缩进的、扩展的css代码<br> compact     简洁格式的css代码<br> compressed  压缩后的css代码</p>
-<blockquote>
-<p>sass &nbsp;&nbsp;–style&nbsp;&nbsp; xxx &nbsp;&nbsp;sass/style.sass&nbsp;&nbsp; css/style.css</p>
-</blockquote>
-<p><code>xxx</code>为对应的风格，其中<code>nested</code>是默认值</p>
-<h5 id="以下是expanded提供的风格">以下是<code>expanded</code>提供的风格</h5><p><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary2_1.png" alt="expanded"></p>
-<h5 id="以下是compact提供的风格">以下是<code>compact</code>提供的风格</h5><p><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary2_2.png" alt="compact"></p>
-<h5 id="以下是compress提供的风格">以下是<code>compress</code>提供的风格</h5><p><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary2_3.png" alt="compress"></p>
-<h4 id="SASS中监听">SASS中监听</h4><blockquote>
-<p>sass&nbsp;&nbsp; –watch &nbsp;&nbsp;sass/style.scss:css/style.css</p>
-</blockquote>
-<p>一旦<code>style.scss</code>文件发生变化，就会按照<code>nested</code>风格编译</p>
+        <span itemprop="articleBody"><p>line-height，相邻文本行基线之间的距离。所谓的基线，就是对于“xxx前端”中“xxx”的下端沿(并非“前端”的下端沿)。<br><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineh2.jpg" alt="example"><br>两条基线的距离<br><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineh3.jpg" alt="examle"><br><a id="more"></a><br>文本行中的每个元素都会生成一个内容区(content area),这由字体大小决定其大小(换言之，内容区紧贴字体)内容区会生成行内框(inline box)。<br>如何确定给定元素的行间距，只需将line-height减去font-size,就是总的行间距(有可能为负值)。将此值除以2，再将间距的一半应用(注意并非是添加)到内容区的顶部和底部,内容区大小不受影响，行内框受到line-height的影响，而我们在屏幕上看到的正是行内框,所以为什么line-height小于font-size时，文本会重叠(因为行内框小于内容区，浏览器显示的是行内框)</p>
+<p>一旦内容行生成所有的行内框，接下来在行框(line-box)的结构中考虑这些行内框,行框的高度恰好包含最高行内框的顶端和最低行内框的底端。</p>
+<p>内容区content area<br><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineh5.jpg" alt="example"></p>
+<ul>
+<li>案例一<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">p</span> <span class="attribute">style</span>=<span class="value">"font-size:12px;line-height:2;"</span>&gt;</span>line-height<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight1.png" alt="example"><br>原因: line-height=(1.2x2)px<br>类似的200%: line-height=(1.2x200%)px</p>
+<ul>
+<li>案例二<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">p</span> <span class="attribute">style</span>=<span class="value">"font-size:12px;line-height:20px;"</span>&gt;</span>line-height<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight2.png" alt="example"><br>原因：line-height=20px</p>
+<ul>
+<li>案例三<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">"line-height:10px"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">p</span> <span class="attribute">style</span>=<span class="value">"font-size:18px"</span>&gt;</span>line-heightline-heightline-heightline-height</span><br><span class="line">    line-heightline-heightline-heightline-heightline-heightline-heightline-</span><br><span class="line">    heightline-heightline-heightline-heightline-height\<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight3.png" alt="example"><br>原因：段落P继承父级元素div的line-height,10px &lt; 18px,造成文字重叠</p>
+<ul>
+<li>案例四<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">"line-height:1"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">p</span> <span class="attribute">style</span>=<span class="value">"font-size:18px"</span>&gt;</span>line-heightline-heightline-heightline-heightline-</span><br><span class="line">    heightline-heightline-heightline-heightline-heightline-heightline-</span><br><span class="line">    heightline-heightline-heightline-heightline-height<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight4.png" alt="example"><br>原因：为了解决案例三的问题，设置一个缩放因子，缩放因子是继承值而不是计算值，为每个子元素根据自己的font-size计算line-height<br>类似的100%</p>
+<p>当div有了文字就会产生高度，高度是来自font-size还是line-height呢？<br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">"font-size: 15px; line-height: 0; border: 1px solid #ccc;"</span>&gt;</span>lineheight<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">"font-size: 1px;line-height: 15px;border: 1px solid #ccc;"</span>&gt;</span>lineheight<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<p><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight5.png" alt="example">  <img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight6.png" alt="example"><br>答案显而易见</p>
+<p>资料参考出处:<a href="http://muki.tw/tech/css-line-height/" target="_blank" rel="external">http://muki.tw/tech/css-line-height/</a></p>
 </span>
       
     </div>
@@ -261,13 +258,11 @@ sass&amp;nbsp;&amp;nbsp; sass/style.scss &amp;nbsp;&amp;nbsp;  css/style.css
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/11/07/requireJS/" rel="prev">初识requireJS</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/11/07/csstriangle/" rel="next">CSS中的三角形</a>
+              <a href="/2015/11/18/line-height/" rel="next">我所理解的line-height</a>
             
           </div>
         </div>
@@ -292,8 +287,8 @@ sass&amp;nbsp;&amp;nbsp; sass/style.scss &amp;nbsp;&amp;nbsp;  css/style.css
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2015/11/07/sassUsage/"
-                   data-title="SASS的简单命令" data-url="http://yoursite.com/2015/11/07/sassUsage/">
+              <div class="ds-thread" data-thread-key="2015/11/18/my-new-post/"
+                   data-title="我所理解的line-height" data-url="http://yoursite.com/2015/11/18/my-new-post/">
               </div>
             
           </div>
@@ -375,7 +370,7 @@ sass&amp;nbsp;&amp;nbsp; sass/style.scss &amp;nbsp;&amp;nbsp;  css/style.css
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#SASS命令总结"><span class="nav-number">1.</span> <span class="nav-text">SASS命令总结</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#以下是expanded提供的风格"><span class="nav-number">1.0.1.</span> <span class="nav-text">以下是expanded提供的风格</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#以下是compact提供的风格"><span class="nav-number">1.0.2.</span> <span class="nav-text">以下是compact提供的风格</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#以下是compress提供的风格"><span class="nav-number">1.0.3.</span> <span class="nav-text">以下是compress提供的风格</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#SASS中监听"><span class="nav-number">1.1.</span> <span class="nav-text">SASS中监听</span></a></li></ol></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
