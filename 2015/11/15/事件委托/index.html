@@ -50,7 +50,7 @@ DOM事件流事件捕获阶段(事件由document对象首先接收,再到事件�
 <meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary3_1.png">
 <meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary3_2.png">
 <meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary3_3.png">
-<meta property="og:updated_time" content="2015-11-23T01:34:04.942Z">
+<meta property="og:updated_time" content="2015-11-23T01:37:28.029Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="聊聊事件委托">
 <meta name="twitter:description" content="事件委托事件委托利用了事件冒泡,只指定一个事件处理程序,就可以管理某一类型的所有事件
@@ -250,7 +250,7 @@ DOM事件流事件捕获阶段(事件由document对象首先接收,再到事件�
 <p>适合采用事件委托技术的事件包括click、mousedown、mouseup、keydown、keyup、keypress</p>
 <h4 id="除了事件委托">除了事件委托</h4><p>在不需要的时候移除事件处理程序，清除内存中留有那些过时不用的“空事件处理程序”。</p>
 <p>DOM0级: xxx.onclick=null;<br>DOM2级: xxx.removeEventListener(‘’,funName,false)<br>其中DOM2级中的removeEventListener()中传入的事件处理程序函数必须与addEventListener()相同(要调用外部函数而非匿名函数)</p>
-<h4 id="一个问题">一个问题</h4><p><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary3_3.png" alt="example"><br>这段代码中,倘若给每个元素事件处理程序属性上添加onclick=”alert(‘xxx’)”事件,点击最深层次的元素，就会连续alert出相应的东西。但不会连续打印出元素名。</p>
+<h4 id="一个问题">一个问题</h4><p><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary3_3.png" alt="example"><br>这段代码中,倘若给每个元素事件处理程序属性上添加onclick=”alert(‘xxx’)”事件,点击最深层次的元素，就会连续alert出相应的东西。但点击嵌套层次中间的元素结点，不会连续打印出元素名。</p>
 <p>答案一: 只绑定一次，应该每个子元素上都绑定click<br>答案二：……</p>
 </span>
       
