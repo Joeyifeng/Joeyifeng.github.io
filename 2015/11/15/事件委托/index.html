@@ -50,7 +50,7 @@ DOM事件流事件捕获阶段(事件由document对象首先接收,再到事件�
 <meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary3_1.png">
 <meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary3_2.png">
 <meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary3_3.png">
-<meta property="og:updated_time" content="2015-11-23T01:39:50.333Z">
+<meta property="og:updated_time" content="2015-11-23T01:57:43.353Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="聊聊事件委托">
 <meta name="twitter:description" content="事件委托事件委托利用了事件冒泡,只指定一个事件处理程序,就可以管理某一类型的所有事件
@@ -246,7 +246,8 @@ DOM事件流事件捕获阶段(事件由document对象首先接收,再到事件�
 <li>注意第一个参数”on”+xxx,事件处理程序是在全局作用域下运行,this等于window</li>
 <li>一个元素上的多个事件处理程序会以”相反的顺序”被触发。</li>
 </ul>
-<h6 id="Javascript中,添加到页面上的事件处理程序数量直接关系到页面的整体运行性能。对“事件处理程序过多”问题的解决方案就是事件委托">Javascript中,添加到页面上的事件处理程序数量直接关系到页面的整体运行性能。对“事件处理程序过多”问题的解决方案就是事件委托</h6><p>使用事件委托,只需在DOM树中尽量高的层次节点上添加一个事件处理程序,如<br><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary3_2.png" alt="example"><br>栗子中,虽然没有在每个li中添加事件,但通过在ul上添加事件监听,事件会沿着li&gt;ul&gt;body&gt;html元素顺序依次发生,直到最终目标元素发生事件</p>
+<p><code>Javascript中,添加到页面上的事件处理程序数量直接关系到页面的整体运行性能。对“事件处理程序过多”问题的解决方案就是事件委托</code></p>
+<p>使用事件委托,只需在DOM树中尽量高的层次节点上添加一个事件处理程序,如<br><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary3_2.png" alt="example"><br>栗子中,虽然没有在每个li中添加事件,但通过在ul上添加事件监听,事件会沿着li&gt;ul&gt;body&gt;html元素顺序依次发生,直到最终目标元素发生事件</p>
 <p>适合采用事件委托技术的事件包括click、mousedown、mouseup、keydown、keyup、keypress</p>
 <h4 id="除了事件委托">除了事件委托</h4><p>在不需要的时候移除事件处理程序，清除内存中留有那些过时不用的“空事件处理程序”。</p>
 <p>DOM0级: xxx.onclick=null;<br>DOM2级: xxx.removeEventListener(‘’,funName,false)<br>其中DOM2级中的removeEventListener()中传入的事件处理程序函数必须与addEventListener()相同(要调用外部函数而非匿名函数)</p>
@@ -377,7 +378,7 @@ DOM事件流事件捕获阶段(事件由document对象首先接收,再到事件�
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#事件委托"><span class="nav-number">1.</span> <span class="nav-text">事件委托</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#如何使用事件委托"><span class="nav-number">2.</span> <span class="nav-text">如何使用事件委托</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#Javascript中,添加到页面上的事件处理程序数量直接关系到页面的整体运行性能。对“事件处理程序过多”问题的解决方案就是事件委托"><span class="nav-number">2.1.</span> <span class="nav-text">Javascript中,添加到页面上的事件处理程序数量直接关系到页面的整体运行性能。对“事件处理程序过多”问题的解决方案就是事件委托</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#除了事件委托"><span class="nav-number"></span> <span class="nav-text">除了事件委托</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#一个问题"><span class="nav-number"></span> <span class="nav-text">一个问题</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#事件委托"><span class="nav-number">1.</span> <span class="nav-text">事件委托</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#如何使用事件委托"><span class="nav-number">2.</span> <span class="nav-text">如何使用事件委托</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#除了事件委托"><span class="nav-number"></span> <span class="nav-text">除了事件委托</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#一个问题"><span class="nav-number"></span> <span class="nav-text">一个问题</span></a></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
