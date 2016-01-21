@@ -37,25 +37,16 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="line-height相邻文本行基线之间的距离。所谓的基线，就是对于“xxx前端”中“xxx”的下端沿(并非“前端”的下端沿)。">
+<meta name="description">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我所理解的line-height">
-<meta property="og:url" content="http://yoursite.com/2015/11/18/line-height/index.html">
+<meta property="og:title" content="diary1">
+<meta property="og:url" content="http://yoursite.com/2015/12/21/diary1/index.html">
 <meta property="og:site_name" content="邹毅锋的笔记">
-<meta property="og:description" content="line-height相邻文本行基线之间的距离。所谓的基线，就是对于“xxx前端”中“xxx”的下端沿(并非“前端”的下端沿)。">
-<meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineh2.jpg">
-<meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineh3.jpg">
-<meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineh5.jpg">
-<meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight1.png">
-<meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight2.png">
-<meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight3.png">
-<meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight4.png">
-<meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight5.png">
-<meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight6.png">
-<meta property="og:updated_time" content="2015-11-23T02:15:20.495Z">
+<meta property="og:description">
+<meta property="og:updated_time" content="2015-12-21T14:02:56.022Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="我所理解的line-height">
-<meta name="twitter:description" content="line-height相邻文本行基线之间的距离。所谓的基线，就是对于“xxx前端”中“xxx”的下端沿(并非“前端”的下端沿)。">
+<meta name="twitter:title" content="diary1">
+<meta name="twitter:description">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -67,7 +58,7 @@
 
 
 
-  <title> 我所理解的line-height | 邹毅锋的笔记 </title>
+  <title> diary1 | 邹毅锋的笔记 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -185,7 +176,7 @@
           
           
             
-              我所理解的line-height
+              diary1
             
           
         </h1>
@@ -194,34 +185,19 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2015-11-18T18:43:25+08:00" content="2015-11-18">
-            2015-11-18
+          <time itemprop="dateCreated" datetime="2015-12-21T22:02:56+08:00" content="2015-12-21">
+            2015-12-21
           </time>
         </span>
 
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp; 分类于
-            
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/Javascript CSS Diary Guitar/CSS/" itemprop="url" rel="index">
-                  <span itemprop="name">CSS</span>
-                </a>
-              </span>
-
-              
-              
-
-            
-          </span>
         
 
         
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/11/18/line-height/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/18/line-height/" itemprop="commentsCount"></span>
+              <a href="/2015/12/21/diary1/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/21/diary1/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -236,37 +212,7 @@
       
 
       
-        <span itemprop="articleBody"><p><code>line-height</code>相邻文本行<code>基线</code>之间的距离。所谓的基线，就是对于“xxx前端”中“xxx”的下端沿(并非“前端”的下端沿)。<br><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineh2.jpg" alt="example"></p>
-<a id="more"></a>
-<p>两条基线的距离<br><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineh3.jpg" alt="examle"></p>
-<p>文本行中的每个元素都会生成一个<code>内容区</code>(content area),这由字体大小决定其大小(换言之，内容区紧贴字体)内容区会生成行内框(inline box)。<br>如何确定给定元素的行间距，只需将<code>line-height</code>减去<code>font-size</code>,就是总的行间距(有可能为<code>负值</code>)。将此值除以2，再将间距的一半应用(注意并非是添加)到内容区的顶部和底部,内容区大小不受影响，行内框受到line-height的影响，而我们在屏幕上看到的正是行内框,所以为什么<code>line-height</code>小于<code>font-size</code>时，文本会重叠(因为行内框小于内容区，浏览器显示的是行内框)</p>
-<p>一旦内成容行生所有的行内框，接下来在行框(line-box)的结构中考虑这些行内框,行框的高度恰好包含最高行内框的顶端和最低行内框的底端。</p>
-<p>内容区<code>content area</code>如图<br><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineh5.jpg" alt="example"></p>
-<ul>
-<li>案例一<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">p</span> <span class="attribute">style</span>=<span class="value">"font-size:12px;line-height:2;"</span>&gt;</span>line-height<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight1.png" alt="example"><br>原因: line-height=(1.2x2)px<br>类似的200%: line-height=(1.2x200%)px</p>
-<ul>
-<li>案例二<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">p</span> <span class="attribute">style</span>=<span class="value">"font-size:12px;line-height:20px;"</span>&gt;</span>line-height<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight2.png" alt="example"><br>原因：line-height=20px</p>
-<ul>
-<li>案例三<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">"line-height:10px"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">p</span> <span class="attribute">style</span>=<span class="value">"font-size:18px"</span>&gt;</span>line-heightline-heightline-heightline-height</span><br><span class="line">    line-heightline-heightline-heightline-heightline-heightline-heightline-</span><br><span class="line">    heightline-heightline-heightline-heightline-height\<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight3.png" alt="example"><br>原因：段落P继承父级元素div的line-height,10px &lt; 18px,造成文字重叠</p>
-<ul>
-<li>案例四<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">"line-height:1"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">p</span> <span class="attribute">style</span>=<span class="value">"font-size:18px"</span>&gt;</span>line-heightline-heightline-heightline-heightline-</span><br><span class="line">    heightline-heightline-heightline-heightline-heightline-heightline-</span><br><span class="line">    heightline-heightline-heightline-heightline-height<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight4.png" alt="example"><br>原因：为了解决案例三的问题，设置一个缩放因子，缩放因子是继承值而不是计算值，为每个子元素根据自己的font-size计算line-height<br>类似的100%</p>
-<h6 id="当div有了文字就会产生高度，高度是来自font-size还是line-height呢？">当div有了文字就会产生高度，高度是来自font-size还是line-height呢？</h6><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">"font-size: 15px; line-height: 0; border: 1px solid #ccc;"</span>&gt;</span>lineheight<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">"font-size: 1px;line-height: 15px;border: 1px solid #ccc;"</span>&gt;</span>lineheight<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight5.png" alt="example"><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight6.png" alt="example"><br>答案显而易见</p>
-<h6 id="line-height:120%_和_line-height:1-2的区别？">line-height:120% 和 line-height:1.2的区别？</h6><p>1.都代表line-height为当前元素font-size的1.2倍<br>2.1带单位的行高都有继承性，子元素继承的是计算值。当父元素字体font-size为12px,line-height为300%,子元素font-size为15px,line-height为36px非45px<br>2.2父元素的不带单位的行高，子元素直接继承属性值。当父元素字体font-size为12px,line-height为300%,子元素font-size为15px,line-height为45px非36px(这里子元素的font-size要大过父元素,否则显示的line-height是父元素的line-height非子元素的line-height,这关于上述行框的最终高度的选取)</p>
-<p>资料参考出处:<a href="http://muki.tw/tech/css-line-height/" target="_blank" rel="external">http://muki.tw/tech/css-line-height/</a></p>
-</span>
+        <span itemprop="articleBody"></span>
       
     </div>
 
@@ -277,13 +223,11 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/12/21/diary/" rel="prev">diary</a>
-            
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/11/16/grunt/" rel="next">Grunt手册</a>
+              <a href="/2015/12/21/diary/" rel="next">diary</a>
             
           </div>
         </div>
@@ -308,8 +252,8 @@
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2015/11/18/line-height/"
-                   data-title="我所理解的line-height" data-url="http://yoursite.com/2015/11/18/line-height/">
+              <div class="ds-thread" data-thread-key="2015/12/21/diary1/"
+                   data-title="diary1" data-url="http://yoursite.com/2015/12/21/diary1/">
               </div>
             
           </div>
@@ -391,7 +335,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#当div有了文字就会产生高度，高度是来自font-size还是line-height呢？"><span class="nav-number">1.</span> <span class="nav-text">当div有了文字就会产生高度，高度是来自font-size还是line-height呢？</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#line-height:120%_和_line-height:1-2的区别？"><span class="nav-number">2.</span> <span class="nav-text">line-height:120% 和 line-height:1.2的区别？</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
