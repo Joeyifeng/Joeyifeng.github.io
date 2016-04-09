@@ -37,16 +37,12 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="概述Git入门系列包括git客户端的安装配置，日常开发中常用命令。本文是第二篇，介绍日常开发中常用的命令。
-Git初始化配置Git提交时的用户名和邮箱12git config --global user.name &quot;xxxxx&quot;git config --global user.email &quot;xxxx@xxxx.com&quot;
-注：git config 命令有3个级别的范围参数，分别是global、loc">
+<meta name="description" content="概述Git入门系列包括git客户端的安装配置，日常开发中常用命令。本文是第二篇，介绍日常开发中常用的命令。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git指南-常用命令篇">
 <meta property="og:url" content="http://yoursite.com/2016/04/09/Git指南-常用命令篇/index.html">
 <meta property="og:site_name" content="阿锋的笔记本">
-<meta property="og:description" content="概述Git入门系列包括git客户端的安装配置，日常开发中常用命令。本文是第二篇，介绍日常开发中常用的命令。
-Git初始化配置Git提交时的用户名和邮箱12git config --global user.name &quot;xxxxx&quot;git config --global user.email &quot;xxxx@xxxx.com&quot;
-注：git config 命令有3个级别的范围参数，分别是global、loc">
+<meta property="og:description" content="概述Git入门系列包括git客户端的安装配置，日常开发中常用命令。本文是第二篇，介绍日常开发中常用的命令。">
 <meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/Git-14.png">
 <meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/Git-15.png">
 <meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/Git-16.png">
@@ -58,12 +54,10 @@ Git初始化配置Git提交时的用户名和邮箱12git config --global user.na
 <meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/Git-22.png">
 <meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/Git-23.png">
 <meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/Git-24.png">
-<meta property="og:updated_time" content="2016-04-09T09:18:27.509Z">
+<meta property="og:updated_time" content="2016-04-09T09:20:31.550Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git指南-常用命令篇">
-<meta name="twitter:description" content="概述Git入门系列包括git客户端的安装配置，日常开发中常用命令。本文是第二篇，介绍日常开发中常用的命令。
-Git初始化配置Git提交时的用户名和邮箱12git config --global user.name &quot;xxxxx&quot;git config --global user.email &quot;xxxx@xxxx.com&quot;
-注：git config 命令有3个级别的范围参数，分别是global、loc">
+<meta name="twitter:description" content="概述Git入门系列包括git客户端的安装配置，日常开发中常用命令。本文是第二篇，介绍日常开发中常用的命令。">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -244,7 +238,7 @@ Git初始化配置Git提交时的用户名和邮箱12git config --global user.na
       
 
       
-        <span itemprop="articleBody"><h2 id="概述">概述</h2><p>Git入门系列包括git客户端的安装配置，日常开发中常用命令。本文是第二篇，介绍日常开发中常用的命令。</p>
+        <span itemprop="articleBody"><h2 id="概述">概述</h2><p>Git入门系列包括git客户端的安装配置，日常开发中常用命令。本文是第二篇，介绍日常开发中常用的命令。<br><a id="more"></a></p>
 <h2 id="Git初始化">Git初始化</h2><h3 id="配置Git提交时的用户名和邮箱">配置Git提交时的用户名和邮箱</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --<span class="keyword">global</span> user.name <span class="string">"xxxxx"</span></span><br><span class="line">git config --<span class="keyword">global</span> user.email <span class="string">"xxxx@xxxx.com"</span></span><br></pre></td></tr></table></figure>
 <p><strong>注：</strong>git config 命令有3个级别的范围参数，分别是global、local和system，建议上google百度一下他们的区别。</p>
 <h3 id="对已有代码目录进行Git初始化">对已有代码目录进行Git初始化</h3><p>假设你刚刚在GitLab上创建了一个Project，它的Git地址为 git@git.xxxx.com:xxxx/test.git 。这个项目里面什么文件也没有。<br>而现在我们在本地有一套项目代码，在test-project目录下，有两个文件：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ls <span class="built_in">test</span>-project/</span><br><span class="line">a.txt  b.txt</span><br></pre></td></tr></table></figure></p>
