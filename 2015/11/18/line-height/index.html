@@ -52,7 +52,7 @@
 <meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight4.png">
 <meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight5.png">
 <meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight6.png">
-<meta property="og:updated_time" content="2015-11-23T02:15:20.495Z">
+<meta property="og:updated_time" content="2016-04-09T12:16:43.630Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="我所理解的line-height">
 <meta name="twitter:description" content="line-height相邻文本行基线之间的距离。所谓的基线，就是对于“xxx前端”中“xxx”的下端沿(并非“前端”的下端沿)。">
@@ -262,9 +262,9 @@
 </li>
 </ul>
 <p><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight4.png" alt="example"><br>原因：为了解决案例三的问题，设置一个缩放因子，缩放因子是继承值而不是计算值，为每个子元素根据自己的font-size计算line-height<br>类似的100%</p>
-<h6 id="当div有了文字就会产生高度，高度是来自font-size还是line-height呢？">当div有了文字就会产生高度，高度是来自font-size还是line-height呢？</h6><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">"font-size: 15px; line-height: 0; border: 1px solid #ccc;"</span>&gt;</span>lineheight<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">"font-size: 1px;line-height: 15px;border: 1px solid #ccc;"</span>&gt;</span>lineheight<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>当div有了文字就会产生高度，高度是来自font-size还是line-height呢？</strong><br><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">"font-size: 15px; line-height: 0; border: 1px solid #ccc;"</span>&gt;</span>lineheight<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">style</span>=<span class="value">"font-size: 1px;line-height: 15px;border: 1px solid #ccc;"</span>&gt;</span>lineheight<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 <p><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight5.png" alt="example"><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary4_lineheight6.png" alt="example"><br>答案显而易见</p>
-<h6 id="line-height:120%_和_line-height:1-2的区别？">line-height:120% 和 line-height:1.2的区别？</h6><p>1.都代表line-height为当前元素font-size的1.2倍<br>2.1带单位的行高都有继承性，子元素继承的是计算值。当父元素字体font-size为12px,line-height为300%,子元素font-size为15px,line-height为36px非45px<br>2.2父元素的不带单位的行高，子元素直接继承属性值。当父元素字体font-size为12px,line-height为300%,子元素font-size为15px,line-height为45px非36px(这里子元素的font-size要大过父元素,否则显示的line-height是父元素的line-height非子元素的line-height,这关于上述行框的最终高度的选取)</p>
+<p><strong>line-height:120% 和 line-height:1.2的区别？</strong><br>1.都代表line-height为当前元素font-size的1.2倍<br>2.1带单位的行高都有继承性，子元素继承的是计算值。当父元素字体font-size为12px,line-height为300%,子元素font-size为15px,line-height为36px非45px<br>2.2父元素的不带单位的行高，子元素直接继承属性值。当父元素字体font-size为12px,line-height为300%,子元素font-size为15px,line-height为45px非36px(这里子元素的font-size要大过父元素,否则显示的line-height是父元素的line-height非子元素的line-height,这关于上述行框的最终高度的选取)</p>
 <p>资料参考出处:<a href="http://muki.tw/tech/css-line-height/" target="_blank" rel="external">http://muki.tw/tech/css-line-height/</a></p>
 </span>
       
@@ -283,7 +283,7 @@
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/11/16/grunt/" rel="next">Grunt手册</a>
+              <a href="/2015/11/15/事件委托/" rel="next">聊聊事件委托</a>
             
           </div>
         </div>
@@ -349,7 +349,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-count">8</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -391,7 +391,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#当div有了文字就会产生高度，高度是来自font-size还是line-height呢？"><span class="nav-number">1.</span> <span class="nav-text">当div有了文字就会产生高度，高度是来自font-size还是line-height呢？</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#line-height:120%_和_line-height:1-2的区别？"><span class="nav-number">2.</span> <span class="nav-text">line-height:120% 和 line-height:1.2的区别？</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>

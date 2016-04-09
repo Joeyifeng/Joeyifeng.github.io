@@ -39,29 +39,20 @@
 
 <meta name="description" content="requireJSrequireJS的作用
 实现js文件的异步加载，避免一次性加载过多的js文件，网页失去响应
-管理模块之间的依赖性，便于代码的依赖和维护
-
-使用前，需要加载require.js 和配置app.js，引入格式如下：
-&amp;lt;script src=&amp;quot;require.js&amp;quot; data-main=&amp;quot;app.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt">
+管理模块之间的依赖性，便于代码的依赖和维护">
 <meta property="og:type" content="article">
 <meta property="og:title" content="初识requireJS">
 <meta property="og:url" content="http://yoursite.com/2015/11/07/requireJS/index.html">
 <meta property="og:site_name" content="阿锋的笔记本">
 <meta property="og:description" content="requireJSrequireJS的作用
 实现js文件的异步加载，避免一次性加载过多的js文件，网页失去响应
-管理模块之间的依赖性，便于代码的依赖和维护
-
-使用前，需要加载require.js 和配置app.js，引入格式如下：
-&amp;lt;script src=&amp;quot;require.js&amp;quot; data-main=&amp;quot;app.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt">
-<meta property="og:updated_time" content="2015-11-23T02:15:25.686Z">
+管理模块之间的依赖性，便于代码的依赖和维护">
+<meta property="og:updated_time" content="2016-04-09T12:15:00.781Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="初识requireJS">
 <meta name="twitter:description" content="requireJSrequireJS的作用
 实现js文件的异步加载，避免一次性加载过多的js文件，网页失去响应
-管理模块之间的依赖性，便于代码的依赖和维护
-
-使用前，需要加载require.js 和配置app.js，引入格式如下：
-&amp;lt;script src=&amp;quot;require.js&amp;quot; data-main=&amp;quot;app.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt">
+管理模块之间的依赖性，便于代码的依赖和维护">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -242,12 +233,13 @@
       
 
       
-        <span itemprop="articleBody"><h3 id="requireJS">requireJS</h3><h5 id="requireJS的作用">requireJS的作用</h5><ul>
+        <span itemprop="articleBody"><h2 id="requireJS">requireJS</h2><h3 id="requireJS的作用">requireJS的作用</h3><ul>
 <li>实现js文件的异步加载，避免一次性加载过多的js文件，网页失去响应</li>
-<li>管理模块之间的依赖性，便于代码的依赖和维护</li>
+<li>管理模块之间的依赖性，便于代码的依赖和维护<a id="more"></a>
+</li>
 </ul>
-<p>使用前，需要加载require.js 和配置app.js，引入格式如下：</p>
-<p><code>&lt;script src=&quot;require.js&quot; data-main=&quot;app.js&quot;&gt;&lt;/script&gt;</code><br><a id="more"></a><br>app.js配置格式</p>
+<h3 id="使用">使用</h3><p>使用前，需要加载require.js 和配置app.js，引入格式如下：</p>
+<p><code>&lt;script src=&quot;require.js&quot; data-main=&quot;app.js&quot;&gt;&lt;/script&gt;</code><br>app.js配置格式</p>
 <pre><code>require.config({     //require.config主要用于修改require的默认配置
     baseUrl:'xxxx',  //这里是js文件放在总目录，paths中可以省略
     paths:{
@@ -344,7 +336,7 @@ GLOBAL.namespace = function(str){   //传入新建的变量str
     }
 };</code></pre>
 
-<h4 id="requireJS注意点">requireJS注意点</h4><ul>
+<h3 id="requireJS注意点">requireJS注意点</h3><ul>
 <li><p>回调函数中最后都会返回一个对象{}，其中以对象字面量的形式返回define中定义的函数和属性,让其他模块可以引用，而require函数不需要return语句</p>
 </li>
 <li></li>
@@ -432,7 +424,7 @@ GLOBAL.namespace = function(str){   //传入新建的变量str
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-count">8</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -474,7 +466,7 @@ GLOBAL.namespace = function(str){   //传入新建的变量str
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#requireJS"><span class="nav-number">1.</span> <span class="nav-text">requireJS</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#requireJS的作用"><span class="nav-number">1.0.1.</span> <span class="nav-text">requireJS的作用</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#requireJS注意点"><span class="nav-number">1.1.</span> <span class="nav-text">requireJS注意点</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#requireJS"><span class="nav-number">1.</span> <span class="nav-text">requireJS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#requireJS的作用"><span class="nav-number">1.1.</span> <span class="nav-text">requireJS的作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用"><span class="nav-number">1.2.</span> <span class="nav-text">使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#requireJS注意点"><span class="nav-number">1.3.</span> <span class="nav-text">requireJS注意点</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
