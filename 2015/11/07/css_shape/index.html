@@ -37,7 +37,7 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="CSS中的三角形
+<meta name="description" content="CSS中三角形相关
 上三角形#top{
     width: 0;
     height: 0;
@@ -46,10 +46,10 @@
     border-right: 20px solid transparent;
 }">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CSS中的三角形">
-<meta property="og:url" content="http://yoursite.com/2015/11/07/csstriangle/index.html">
+<meta property="og:title" content="CSS中的奇形怪状">
+<meta property="og:url" content="http://yoursite.com/2015/11/07/css_shape/index.html">
 <meta property="og:site_name" content="阿锋的笔记本">
-<meta property="og:description" content="CSS中的三角形
+<meta property="og:description" content="CSS中三角形相关
 上三角形#top{
     width: 0;
     height: 0;
@@ -62,10 +62,12 @@
 <meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary1_4.png">
 <meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary1_5.png">
 <meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/diary1_6.png">
-<meta property="og:updated_time" content="2015-11-23T02:15:22.038Z">
+<meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/circle.png">
+<meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/roundness.png">
+<meta property="og:updated_time" content="2016-05-29T05:03:02.994Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CSS中的三角形">
-<meta name="twitter:description" content="CSS中的三角形
+<meta name="twitter:title" content="CSS中的奇形怪状">
+<meta name="twitter:description" content="CSS中三角形相关
 上三角形#top{
     width: 0;
     height: 0;
@@ -84,7 +86,7 @@
 
 
 
-  <title> CSS中的三角形 | 阿锋的笔记本 </title>
+  <title> CSS中的奇形怪状 | 阿锋的笔记本 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -202,7 +204,7 @@
           
           
             
-              CSS中的三角形
+              CSS中的奇形怪状
             
           
         </h1>
@@ -237,8 +239,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2015/11/07/csstriangle/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/07/csstriangle/" itemprop="commentsCount"></span>
+              <a href="/2015/11/07/css_shape/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/07/css_shape/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -253,7 +255,7 @@
       
 
       
-        <span itemprop="articleBody"><h3 id="CSS中的三角形">CSS中的三角形</h3><hr>
+        <span itemprop="articleBody"><h3 id="CSS中三角形相关">CSS中三角形相关</h3><hr>
 <h5 id="上三角形">上三角形</h5><pre><code>#top{
     width: 0;
     height: 0;
@@ -296,26 +298,13 @@
 <p><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary1_5.png" alt="no border left"></p>
 <p>可以想象出，对于top的三角形，<code>border-left</code>和<code>border-right</code>设置三角形的宽度，<code>border-bottom</code>设置三角形的高度</p>
 <h4 id="应用对话框">应用对话框</h4><p><img src="http://7xo8y0.com1.z0.glb.clouddn.com/diary1_6.png" alt="dialog"></p>
-<pre><code>#dialog{
-        position: relative;
-        width: 120px;
-        height: 50px;
-        margin-left: 30px;
-        background: red;
-        border-radius: 10px;
-        }
- #dialog:before{
-        position: absolute;
-        content:"";
-        right:100%;
-        top: 12px;
-        width: 0;
-        height: 0;
-        border-top: 13px solid transparent;
-        border-bottom: 13px solid transparent;
-        border-right: 13px solid red;
-    }</code></pre>
-
+<p><pre><code>#dialog{<br>        position: relative;<br>        width: 120px;<br>        height: 50px;<br>        margin-left: 30px;<br>        background: red;<br>        border-radius: 10px;<br>        }</code></pre></p>
+<p> #dialog:before{<br>        position: absolute;<br>        content:””;<br>        right:100%;<br>        top: 12px;<br>        width: 0;<br>        height: 0;<br>        border-top: 13px solid transparent;<br>        border-bottom: 13px solid transparent;<br>        border-right: 13px solid red;<br>    }</p>
+<h3 id="CSS中圆形相关">CSS中圆形相关</h3><h4 id="圆圈">圆圈</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.circle</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">100px</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">100px</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">border-radius</span>:<span class="value"> <span class="number">50px</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">border</span>:<span class="value"> <span class="number">1px</span> <span class="hexcolor">#6C93D0</span> solid</span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<p><img src="http://7xo8y0.com1.z0.glb.clouddn.com/circle.png" alt="circle"></p>
+<h4 id="圆形">圆形</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.roundness</span><span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">100px</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">100px</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">border-radius</span>:<span class="value"> <span class="number">50px</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">background-color</span>:<span class="value"> <span class="hexcolor">#6C93D0</span></span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<p><img src="http://7xo8y0.com1.z0.glb.clouddn.com/roundness.png" alt="roundness"></p>
+<h4 id="原理-1">原理</h4><p>原理一看就明白啦，不再赘述。<code>border-radius</code>按道理是宽高的一半即可，超过也会显示正常。</p>
 </span>
       
     </div>
@@ -356,8 +345,8 @@
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2015/11/07/csstriangle/"
-                   data-title="CSS中的三角形" data-url="http://yoursite.com/2015/11/07/csstriangle/">
+              <div class="ds-thread" data-thread-key="2015/11/07/css_shape/"
+                   data-title="CSS中的奇形怪状" data-url="http://yoursite.com/2015/11/07/css_shape/">
               </div>
             
           </div>
@@ -439,7 +428,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS中的三角形"><span class="nav-number">1.</span> <span class="nav-text">CSS中的三角形</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#上三角形"><span class="nav-number">1.0.1.</span> <span class="nav-text">上三角形</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#右上三角形"><span class="nav-number">1.0.2.</span> <span class="nav-text">右上三角形</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#左上三角形"><span class="nav-number">1.0.3.</span> <span class="nav-text">左上三角形</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#原理"><span class="nav-number">1.1.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#应用对话框"><span class="nav-number">1.2.</span> <span class="nav-text">应用对话框</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS中三角形相关"><span class="nav-number">1.</span> <span class="nav-text">CSS中三角形相关</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#上三角形"><span class="nav-number">1.0.1.</span> <span class="nav-text">上三角形</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#右上三角形"><span class="nav-number">1.0.2.</span> <span class="nav-text">右上三角形</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#左上三角形"><span class="nav-number">1.0.3.</span> <span class="nav-text">左上三角形</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#原理"><span class="nav-number">1.1.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#应用对话框"><span class="nav-number">1.2.</span> <span class="nav-text">应用对话框</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS中圆形相关"><span class="nav-number">2.</span> <span class="nav-text">CSS中圆形相关</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#圆圈"><span class="nav-number">2.1.</span> <span class="nav-text">圆圈</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#圆形"><span class="nav-number">2.2.</span> <span class="nav-text">圆形</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#原理-1"><span class="nav-number">2.3.</span> <span class="nav-text">原理</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
