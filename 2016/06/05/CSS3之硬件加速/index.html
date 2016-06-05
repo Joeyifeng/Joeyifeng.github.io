@@ -49,7 +49,7 @@
 <meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/css-accelarate-07.gif">
 <meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/css-accelarate-05.gif">
 <meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/css-accelarate-08.gif">
-<meta property="og:updated_time" content="2016-06-05T07:49:15.180Z">
+<meta property="og:updated_time" content="2016-06-05T07:54:23.010Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS3之硬件加速">
 <meta name="twitter:description" content="前言最近再弄快成长移动端官网，产品提出了个需求，要求实现页面向下滚动导航栏顶部吸附的效果，其中发现几处好玩的地方。">
@@ -233,7 +233,7 @@
       
 
       
-        <span itemprop="articleBody"><h3 id="前言">前言</h3><p>最近再弄快成长移动端官网，产品提出了个需求，要求实现页面向下滚动导航栏顶部吸附的效果，其中发现几处好玩的地方。</p>
+        <span itemprop="articleBody"><h4 id="前言">前言</h4><p>最近再弄快成长移动端官网，产品提出了个需求，要求实现页面向下滚动导航栏顶部吸附的效果，其中发现几处好玩的地方。</p>
 <a id="more"></a>
 <h4 id="知识点补充">知识点补充</h4><h5 id="60fps和设备刷新率">60fps和设备刷新率</h5><p>当今大多数设备的屏幕刷新率都是 60次/秒 。因此，如果在页面中有一个动画或渐变效果，或者用户正在滑动页面，那么浏览器渲染动画或页面的每一帧的速率，也需要跟设备屏幕的刷新率保持一致。</p>
 <p>也就是说，浏览器对每一帧画面的渲染工作需要在16毫秒（1秒 / 60 = 16.66毫秒）之内完成。但实际上，在渲染某一帧画面的同时，浏览器还有一些额外的工作要做（比如渲染队列的管理，渲染线程与其他线程之间的切换等等）。因此单纯的渲染工作，一般需要控制在10毫秒之内完成，才能达到流畅的视觉效果。如果超过了这个时间限度，页面的渲染就会出现卡顿效果，也就是常说的jank，它是很糟糕的用户体验。</p>
@@ -370,7 +370,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#知识点补充"><span class="nav-number">1.1.</span> <span class="nav-text">知识点补充</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#60fps和设备刷新率"><span class="nav-number">1.1.1.</span> <span class="nav-text">60fps和设备刷新率</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#CSS3硬件加速"><span class="nav-number">1.1.2.</span> <span class="nav-text">CSS3硬件加速</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#最佳实践一"><span class="nav-number">1.2.</span> <span class="nav-text">最佳实践一</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#测试一结果"><span class="nav-number">1.2.1.</span> <span class="nav-text">测试一结果</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#测试二结果"><span class="nav-number">1.2.2.</span> <span class="nav-text">测试二结果</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#最佳实践二"><span class="nav-number">1.3.</span> <span class="nav-text">最佳实践二</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#参考："><span class="nav-number">1.4.</span> <span class="nav-text">参考：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#知识点补充"><span class="nav-number">2.</span> <span class="nav-text">知识点补充</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#60fps和设备刷新率"><span class="nav-number">2.1.</span> <span class="nav-text">60fps和设备刷新率</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#CSS3硬件加速"><span class="nav-number">2.2.</span> <span class="nav-text">CSS3硬件加速</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#最佳实践一"><span class="nav-number">3.</span> <span class="nav-text">最佳实践一</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#测试一结果"><span class="nav-number">3.1.</span> <span class="nav-text">测试一结果</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#测试二结果"><span class="nav-number">3.2.</span> <span class="nav-text">测试二结果</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#最佳实践二"><span class="nav-number">4.</span> <span class="nav-text">最佳实践二</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#参考："><span class="nav-number">5.</span> <span class="nav-text">参考：</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
