@@ -177,6 +177,87 @@
           
           
             
+              <a class="post-title-link" href="/2016/06/05/CSS3之硬件加速/" itemprop="url">
+                CSS3之硬件加速
+              </a>
+            
+          
+        </h1>
+      
+
+      <div class="post-meta">
+        <span class="post-time">
+          发表于
+          <time itemprop="dateCreated" datetime="2016-06-05T15:34:24+08:00" content="2016-06-05">
+            2016-06-05
+          </time>
+        </span>
+
+        
+
+        
+          
+            <span class="post-comments-count">
+              &nbsp; | &nbsp;
+              <a href="/2016/06/05/CSS3之硬件加速/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/05/CSS3之硬件加速/" itemprop="commentsCount"></span>
+              </a>
+            </span>
+          
+        
+        
+      </div>
+    </header>
+
+    <div class="post-body">
+
+      
+      
+
+      
+        
+          <span itemprop="articleBody"><h3 id="前言">前言</h3><p>最近再弄快成长移动端官网，产品提出了个需求，要求实现页面向下滚动导航栏顶部吸附的效果，其中发现几处好玩的地方。</p>
+<h4 id="知识点补充">知识点补充</h4><h5 id="60fps和设备刷新率">60fps和设备刷新率</h5><p>当今大多数设备的屏幕刷新率都是 60次/秒 。因此，如果在页面中有一个动画或渐变效果，或者用户正在滑动页面，那么浏览器渲染动画或页面的每一帧的速率，也需要跟设备屏幕的刷新率保持一致。</p>
+<p>也就是说，浏览器对每一帧画面的渲染工作需要在16毫秒（1秒 / 60 = 16.66毫秒）之内完成。但实际上，在渲染某一帧画面的同时，浏览器还有一些额外的工作要做（比如渲染队列的管理，渲染线程与其他线程之间的切换等等）。因此单纯的渲染工作，一般需要控制在10毫秒之内完成，才能达到流畅的视觉效果。如果超过了这个时间限度，页面的渲染就会出现卡顿效果，也就是常说的jank，它是很糟糕的用户体验。</p>
+<h5 id="CSS3硬件加速">CSS3硬件加速</h5><p>现代浏览器大都可以利用GPU来加速页面渲染。在GPU的众多特性之中，它可以存储一定数量的纹理（一个矩形的像素点集合）并且高效地操作这些纹理（比如进行特定的移动、缩放和旋转操作）。这些特性在实现一个流畅的动画时特别有用。浏览器不会在动画的每一帧都绘制一次，而是生成DOM元素的快照，并作为GPU纹理（也被叫做层）存储起来。之后浏览器只需要告诉GPU去转换指定的纹理来实现DOM元素的动画效果。这就叫做GPU合成，也经常被称作『硬件加速』。</p>
+<h5 id="最佳实践一">最佳实践一</h5><p>下面是个两个测试demo<br><a href="http://joeyifeng.github.io/CSSDemo/Hardware-Accelerated-CSS/demo1.html" target="_blank" rel="external">demo1卡顿版</a>、<a href="http://joeyifeng.github.io/CSSDemo/Hardware-Accelerated-CSS/demo2.html" target="_blank" rel="external">demo2加速版</a><br>首先在chrome Dev tool中console 选出Rendering，选择FPS Meter 和 Paint Flashing（如图）。<br>因为现在设备的配置已经相当高了，所以demo采用的比较暴力的方法。如图示中外圈并非采用border，而是采用border-shadow，我们知道box-shadow的动画变化会比较损耗性能。再者将其中的<code>&lt;div class=&quot;ball&quot;&gt;&lt;/div&gt;</code>重复n遍，放大box-shadow动画变化的性能损耗。<br><img src="http://7xo8y0.com1.z0.glb.clouddn.com/css-accelarate-01.png" alt="FPS Meter 和 Paint "><br>FPS Meter：Plots frames per second,frame rate distribution,and GPU memory（帧的持续绘制模式状态表，记录绘制速率和GPU的内存使用情况）<br>Paint Flashing：Highlights areas of the page that need to be repainted（监控repaint区域，发生重绘则会高亮显示）</p>
+<h6 id="测试一结果">测试一结果</h6><p><img src="http://7xo8y0.com1.z0.glb.clouddn.com/css-accelarate-06.gif" alt="测试一结果"><br><img src="http://7xo8y0.com1.z0.glb.clouddn.com/css-accelarate-03.gif" alt="测试一结果"></p>
+<h6 id="测试二结果">测试二结果</h6><p><img src="http://7xo8y0.com1.z0.glb.clouddn.com/css-accelarate-07.gif" alt="测试二结果"><br><img src="http://7xo8y0.com1.z0.glb.clouddn.com/css-accelarate-05.gif" alt="测试二结果"> </p>
+<p>实验结果表明，实验一页面渲染绘制在每秒60帧或以上（为什么停留在60fps呢？哈哈，因为电脑设备设置每秒刷新页面60次啊，就是60HZ）,且动画发生过程没有发生重绘；实验二页面渲染绘制在每秒30帧左右，出现了明显的卡顿，且发生了重绘。 </p>
+<p>综上所述，当我们用transform: translate属性代替top、left去实现元素的动画效果，已经开启了CSS3硬件加速并且过程不会发生重绘，动画由GPU控制，创建了一个独立 的复合图层（在Rendering中选择Layer Borders，则可以显示出独立符合图层，如图）<br><img src="http://7xo8y0.com1.z0.glb.clouddn.com/css-accelarate-08.gif" alt="测试二结果"></p>
+<h5 id="最佳实践二">最佳实践二</h5><p>从  top: 0  到  tranform: translate3d(0px,zpx,0px)</p>
+<p>未完待续。</p>
+<h5 id="参考：">参考：</h5><p><a href="https://developers.google.com/web/tools/chrome-devtools/profile/evaluate-performance/timeline-tool" target="_blank" rel="external">How to Use the Timeline Tool</a><br><a href="https://www.sitepoint.com/introduction-to-hardware-acceleration-css-animations/" target="_blank" rel="external">An Introduction to Hardware Acceleration with CSS Animations</a><br><a href="http://www.w3cplus.com/css3/introduction-to-hardware-acceleration-css-animations.html" target="_blank" rel="external">CSS动画之硬件加速</a></p>
+</span>
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      
+      
+        <h1 class="post-title" itemprop="name headline">
+          
+          
+            
               <a class="post-title-link" href="/2016/05/21/IE8兼容笔记/" itemprop="url">
                 IE8兼容笔记
               </a>
@@ -523,100 +604,11 @@
 
 
     
-      
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      
-      
-        <h1 class="post-title" itemprop="name headline">
-          
-          
-            
-              <a class="post-title-link" href="/2015/12/21/记广州快一点公司前端实习生面试/" itemprop="url">
-                记广州快一点公司前端实习生面试
-              </a>
-            
-          
-        </h1>
-      
-
-      <div class="post-meta">
-        <span class="post-time">
-          发表于
-          <time itemprop="dateCreated" datetime="2015-12-21T22:02:10+08:00" content="2015-12-21">
-            2015-12-21
-          </time>
-        </span>
-
-        
-          <span class="post-category" >
-            &nbsp; | &nbsp; 分类于
-            
-              <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/Javascript CSS Git 日记 算法 Guitar/日记/" itemprop="url" rel="index">
-                  <span itemprop="name">日记</span>
-                </a>
-              </span>
-
-              
-              
-
-            
-          </span>
-        
-
-        
-          
-            <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/12/21/记广州快一点公司前端实习生面试/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/21/记广州快一点公司前端实习生面试/" itemprop="commentsCount"></span>
-              </a>
-            </span>
-          
-        
-        
-      </div>
-    </header>
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>2015年12月18日，风和日丽，正应正了那句话：“以景衬情”，预示着好事的降临~~<br>地铁3号线到5号线，兜兜转转从华农大正门到测绘大厦，接下面试的过程差不多三小时。<br>面试还是感觉很完整流畅的，笔试-面试-hr面<br>笔试的题目大致是这样的：<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/21/记广州快一点公司前端实习生面试/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">&raquo;</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">&raquo;</a>
   </nav>
 
  </div>
@@ -650,7 +642,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">10</span>
+              <span class="site-state-item-count">11</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -664,7 +656,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">0</span>
+              <span class="site-state-item-count">1</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
