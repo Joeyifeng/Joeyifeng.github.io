@@ -37,28 +37,22 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="前言最近再弄快成长移动端官网，产品提出了个需求，要求实现页面向下滚动导航栏顶部吸附的效果，其中发现几处好玩的地方。
-知识点补充60fps和设备刷新率当今大多数设备的屏幕刷新率都是 60次/秒 。因此，如果在页面中有一个动画或渐变效果，或者用户正在滑动页面，那么浏览器渲染动画或页面的每一帧的速率，也需要跟设备屏幕的刷新率保持一致。
-也就是说，浏览器对每一帧画面的渲染工作需要在16毫秒（1秒 / 60">
+<meta name="description" content="前言最近再弄快成长移动端官网，产品提出了个需求，要求实现页面向下滚动导航栏顶部吸附的效果，其中发现几处好玩的地方。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS3之硬件加速">
 <meta property="og:url" content="http://yoursite.com/2016/06/05/CSS3之硬件加速/index.html">
 <meta property="og:site_name" content="阿锋的笔记本">
-<meta property="og:description" content="前言最近再弄快成长移动端官网，产品提出了个需求，要求实现页面向下滚动导航栏顶部吸附的效果，其中发现几处好玩的地方。
-知识点补充60fps和设备刷新率当今大多数设备的屏幕刷新率都是 60次/秒 。因此，如果在页面中有一个动画或渐变效果，或者用户正在滑动页面，那么浏览器渲染动画或页面的每一帧的速率，也需要跟设备屏幕的刷新率保持一致。
-也就是说，浏览器对每一帧画面的渲染工作需要在16毫秒（1秒 / 60">
+<meta property="og:description" content="前言最近再弄快成长移动端官网，产品提出了个需求，要求实现页面向下滚动导航栏顶部吸附的效果，其中发现几处好玩的地方。">
 <meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/css-accelarate-01.png">
 <meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/css-accelarate-06.gif">
 <meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/css-accelarate-03.gif">
 <meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/css-accelarate-07.gif">
 <meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/css-accelarate-05.gif">
 <meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/css-accelarate-08.gif">
-<meta property="og:updated_time" content="2016-06-05T07:38:57.332Z">
+<meta property="og:updated_time" content="2016-06-05T07:43:56.316Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS3之硬件加速">
-<meta name="twitter:description" content="前言最近再弄快成长移动端官网，产品提出了个需求，要求实现页面向下滚动导航栏顶部吸附的效果，其中发现几处好玩的地方。
-知识点补充60fps和设备刷新率当今大多数设备的屏幕刷新率都是 60次/秒 。因此，如果在页面中有一个动画或渐变效果，或者用户正在滑动页面，那么浏览器渲染动画或页面的每一帧的速率，也需要跟设备屏幕的刷新率保持一致。
-也就是说，浏览器对每一帧画面的渲染工作需要在16毫秒（1秒 / 60">
+<meta name="twitter:description" content="前言最近再弄快成长移动端官网，产品提出了个需求，要求实现页面向下滚动导航栏顶部吸附的效果，其中发现几处好玩的地方。">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -225,6 +219,7 @@
 
       
         <span itemprop="articleBody"><h3 id="前言">前言</h3><p>最近再弄快成长移动端官网，产品提出了个需求，要求实现页面向下滚动导航栏顶部吸附的效果，其中发现几处好玩的地方。</p>
+<a id="more"></a>
 <h4 id="知识点补充">知识点补充</h4><h5 id="60fps和设备刷新率">60fps和设备刷新率</h5><p>当今大多数设备的屏幕刷新率都是 60次/秒 。因此，如果在页面中有一个动画或渐变效果，或者用户正在滑动页面，那么浏览器渲染动画或页面的每一帧的速率，也需要跟设备屏幕的刷新率保持一致。</p>
 <p>也就是说，浏览器对每一帧画面的渲染工作需要在16毫秒（1秒 / 60 = 16.66毫秒）之内完成。但实际上，在渲染某一帧画面的同时，浏览器还有一些额外的工作要做（比如渲染队列的管理，渲染线程与其他线程之间的切换等等）。因此单纯的渲染工作，一般需要控制在10毫秒之内完成，才能达到流畅的视觉效果。如果超过了这个时间限度，页面的渲染就会出现卡顿效果，也就是常说的jank，它是很糟糕的用户体验。</p>
 <h5 id="CSS3硬件加速">CSS3硬件加速</h5><p>现代浏览器大都可以利用GPU来加速页面渲染。在GPU的众多特性之中，它可以存储一定数量的纹理（一个矩形的像素点集合）并且高效地操作这些纹理（比如进行特定的移动、缩放和旋转操作）。这些特性在实现一个流畅的动画时特别有用。浏览器不会在动画的每一帧都绘制一次，而是生成DOM元素的快照，并作为GPU纹理（也被叫做层）存储起来。之后浏览器只需要告诉GPU去转换指定的纹理来实现DOM元素的动画效果。这就叫做GPU合成，也经常被称作『硬件加速』。</p>
