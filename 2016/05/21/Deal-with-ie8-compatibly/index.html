@@ -37,19 +37,17 @@
   <link rel="shorticon icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.1" />
 
 
-<meta name="description" content="伪数组伪数组是一种结构对象，具有以下特点
-1.具有length属性2.按照索引方式存储数据3.不具有数组的push pop方法4.可以通过Array.prototype.slice">
+<meta name="description" content="前言最近在做快成长的官网，在兼容ie8的时候，发现了一些比较好的处理方式。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Javascript中有趣的“现象”">
-<meta property="og:url" content="http://yoursite.com/2016/05/09/Javascript中有趣的“现象”/index.html">
+<meta property="og:title" content="IE8兼容笔记">
+<meta property="og:url" content="http://yoursite.com/2016/05/21/Deal-with-ie8-compatibly/index.html">
 <meta property="og:site_name" content="阿锋的笔记本">
-<meta property="og:description" content="伪数组伪数组是一种结构对象，具有以下特点
-1.具有length属性2.按照索引方式存储数据3.不具有数组的push pop方法4.可以通过Array.prototype.slice">
-<meta property="og:updated_time" content="2016-05-20T16:47:18.750Z">
+<meta property="og:description" content="前言最近在做快成长的官网，在兼容ie8的时候，发现了一些比较好的处理方式。">
+<meta property="og:image" content="http://7xo8y0.com1.z0.glb.clouddn.com/IE8_01.png">
+<meta property="og:updated_time" content="2016-05-20T23:49:13.216Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Javascript中有趣的“现象”">
-<meta name="twitter:description" content="伪数组伪数组是一种结构对象，具有以下特点
-1.具有length属性2.按照索引方式存储数据3.不具有数组的push pop方法4.可以通过Array.prototype.slice">
+<meta name="twitter:title" content="IE8兼容笔记">
+<meta name="twitter:description" content="前言最近在做快成长的官网，在兼容ie8的时候，发现了一些比较好的处理方式。">
 
 
 <script type="text/javascript" id="hexo.configuration">
@@ -61,7 +59,7 @@
 
 
 
-  <title> Javascript中有趣的“现象” | 阿锋的笔记本 </title>
+  <title> IE8兼容笔记 | 阿锋的笔记本 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -179,7 +177,7 @@
           
           
             
-              Javascript中有趣的“现象”
+              IE8兼容笔记
             
           
         </h1>
@@ -188,8 +186,8 @@
       <div class="post-meta">
         <span class="post-time">
           发表于
-          <time itemprop="dateCreated" datetime="2016-05-09T08:48:09+08:00" content="2016-05-09">
-            2016-05-09
+          <time itemprop="dateCreated" datetime="2016-05-21T00:30:34+08:00" content="2016-05-21">
+            2016-05-21
           </time>
         </span>
 
@@ -198,8 +196,8 @@
             &nbsp; | &nbsp; 分类于
             
               <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                <a href="/Javascript CSS Git 日记 算法 Guitar/Javascript/" itemprop="url" rel="index">
-                  <span itemprop="name">Javascript</span>
+                <a href="/Javascript CSS Git 日记 算法 Guitar/CSS/" itemprop="url" rel="index">
+                  <span itemprop="name">CSS</span>
                 </a>
               </span>
 
@@ -214,8 +212,8 @@
           
             <span class="post-comments-count">
               &nbsp; | &nbsp;
-              <a href="/2016/05/09/Javascript中有趣的“现象”/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/09/Javascript中有趣的“现象”/" itemprop="commentsCount"></span>
+              <a href="/2016/05/21/Deal-with-ie8-compatibly/#comments" itemprop="discussionUrl">
+                <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/21/Deal-with-ie8-compatibly/" itemprop="commentsCount"></span>
               </a>
             </span>
           
@@ -230,8 +228,14 @@
       
 
       
-        <span itemprop="articleBody"><h2 id="伪数组">伪数组</h2><p>伪数组是一种结构对象，具有以下特点</p>
-<p>1.具有length属性<br>2.按照索引方式存储数据<br>3.不具有数组的push pop方法<br>4.可以通过Array.prototype.slice<br><a id="more"></a><br>比如<br>function内的arguments，document.forms和document.getElementsByTagName获取得到的集合（HTMLCollection和[]NodeList/childNodes]<a href="http://www.cnblogs.com/snandy/archive/2011/03/11/1980085.html" target="_blank" rel="external">关于childNodes/NodeList</a></p>
+        <span itemprop="articleBody"><h3 id="前言">前言</h3><p>最近在做快成长的官网，在兼容ie8的时候，发现了一些比较好的处理方式。</p>
+<a id="more"></a>
+<h4 id="兼容CSS3中的处理方式">兼容CSS3中的处理方式</h4><p>transform: scale(): 当使用此CSS3属性（一个参数）缩放时，在IE8下使用zoom属性替代。zoom在几年前是IE的私有属性，非标准，如今除了firefox，现代浏览器都能支持了。<br><img src="http://7xo8y0.com1.z0.glb.clouddn.com/IE8_01.png" alt="caniuse"><br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.demo</span><span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">zoom</span>:<span class="value"> <span class="number">50%</span></span></span>;    <span class="comment">/*equal to transform:scale(0.5)*/</span></span><br><span class="line">    <span class="rule"><span class="attribute">zoom</span>:<span class="value"> <span class="number">0.5</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">zoom</span>:<span class="value"> normal</span></span>; <span class="comment">/*equal to zoom: 1*/</span></span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure></p>
+<p><a href="http://7xo8y0.com1.z0.glb.clouddn.com/IE8_01.png" target="_blank" rel="external">参考</a></p>
+<h4 id="IE8_通用方法样式覆盖处理">IE8 通用方法样式覆盖处理</h4><p>我们知道网上都有说处理IE8的兼容性用到hack写法 “\0” ，但是这种写法虽然能够区分ie8和其他浏览器chrome，firefox，但是ie9，ie10同样适用，这种写法并非ie8 特有的。<br>一般情况下，我们采取下面的写法，在chrome下应为无法识别“\0”规则，则后面无法覆盖成功，这是我们想要的。但是，ie9+能够正确识别，则产生覆盖的效果，这不是我们想要的。<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.demo</span><span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#ddd</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#ddd</span>\<span class="number">0</span></span></span>;    <span class="comment">/*for ie8*/</span></span><br><span class="line">    <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#ddd</span>\<span class="number">9</span></span></span>;    <span class="comment">/*for ie6+*/</span></span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure></p>
+<p>接下来如何实现特有的ie8 hack 写法<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.demo</span><span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#ddd</span>\<span class="number">0</span></span></span>;</span><br><span class="line">&#125;</span></span><br><span class="line"><span class="pseudo">:root</span> <span class="class">.demo</span><span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#fff</span></span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure></p>
+<p>这种写法就很好的区分ie8和其他浏览器了，因为ie8能够识别出”\0”写法并且不支持:root (相当于html)这种CSS3选择器的写法（ie8不支持CSS3），且ie9+、chrome、firefox浏览器最终会选择后者“覆盖”前者，皆大欢喜。<br><a href="http://yujiangshui.com/only-ie8-effective-css-hack/" target="_blank" rel="external">参考</a></p>
+<p>持续更新中。</p>
 </span>
       
     </div>
@@ -243,13 +247,13 @@
         <div class="post-nav">
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/05/21/IE8兼容笔记/" rel="prev">IE8兼容笔记</a>
+              <a href="/2016/06/05/Hardware-Acceleration-of-CSS3/" rel="prev">CSS3之硬件加速</a>
             
           </div>
 
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/04/09/Git指南-常用命令篇/" rel="next">Git指南-常用命令篇（转）</a>
+              <a href="/2016/05/09/Interesting-Thing-Javascript/" rel="next">Javascript中有趣的“现象”</a>
             
           </div>
         </div>
@@ -274,8 +278,8 @@
         
           <div class="comments" id="comments">
             
-              <div class="ds-thread" data-thread-key="2016/05/09/Javascript中有趣的“现象”/"
-                   data-title="Javascript中有趣的“现象”" data-url="http://yoursite.com/2016/05/09/Javascript中有趣的“现象”/">
+              <div class="ds-thread" data-thread-key="2016/05/21/Deal-with-ie8-compatibly/"
+                   data-title="IE8兼容笔记" data-url="http://yoursite.com/2016/05/21/Deal-with-ie8-compatibly/">
               </div>
             
           </div>
@@ -357,7 +361,7 @@
           <div class="post-toc">
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#伪数组"><span class="nav-number">1.</span> <span class="nav-text">伪数组</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#兼容CSS3中的处理方式"><span class="nav-number">1.1.</span> <span class="nav-text">兼容CSS3中的处理方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#IE8_通用方法样式覆盖处理"><span class="nav-number">1.2.</span> <span class="nav-text">IE8 通用方法样式覆盖处理</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator"></div>
